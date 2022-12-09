@@ -3,7 +3,6 @@ import { Text, StyleSheet, View } from "react-native";
 import LoginLogo from "../components/LoginLogo";
 import MainButton from "../components/MainButton";
 import PhoneInput from "@therightfit/react-native-phone-number-input"
-import { green100 } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 const Register = () => {
   const phoneInput = useRef<PhoneInput>(null);

@@ -1,10 +1,12 @@
-import * as React from "react";
+import React, {useState} from "react";
 import { Text, StyleSheet, View } from "react-native";
 import LoginLogo from "../components/LoginLogo";
 import CheckboxLabel from "../components/CheckboxLabel";
 import MainButton from "../components/MainButton";
+import CheckBox from "../components/CheckboxCustom";
 
 const LoginAs = () => {
+  const [userType, setUserType] = useState(false);
   return (
     <View style={styles.loginAsView}>
       <LoginLogo />
@@ -13,10 +15,15 @@ const LoginAs = () => {
           Please Choose one of following options
         </Text>
         <View style={[styles.frameView, styles.mt30]}>
-          <CheckboxLabel driver="Driver" />
+          <CheckBox
+            onPress={() => setUserType(!userType)}
+            title="userType"
+            isChecked={userType}
+          />  
+          {/* <CheckboxLabel driver="Driver" />
           <CheckboxLabel driver="Buyer" />
           <CheckboxLabel driver="Reciver" />
-          <CheckboxLabel driver="Transportation company" />
+          <CheckboxLabel driver="Transportation company" /> */}
         </View>
         <MainButton submit="Submit" />
       </View>
