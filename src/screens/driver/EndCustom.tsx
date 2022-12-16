@@ -1,10 +1,10 @@
 import * as React from "react";
 import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
-import HeaderDCommon from "../components/HeaderDCommon";
-import LoadingInfo from "../components/LoadingInfo";
-import DischargeInfo from "../components/DischargeInfo";
-import ButtonDoc from "../components/ButtonDoc";
-import BottomMenu from "../components/BottomMenu";
+import HeaderDCommon from "../driver/components/HeaderDCommon";
+import LoadingInfo from "../driver/components/LoadingInfo";
+import DischargeInfo from "../driver/components/DischargeInfo";
+import ButtonDoc from "../driver/components/ButtonDoc";
+import BottomMenu from "../driver/components/BottomMenu";
 
 const EndCustom = () => {
   return (

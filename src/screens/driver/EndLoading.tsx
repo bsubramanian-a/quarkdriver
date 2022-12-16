@@ -1,11 +1,11 @@
 import * as React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import HeaderDCommon from "../components/HeaderDCommon";
-import LoadingInfo from "../components/LoadingInfo";
-import DischargeInfo from "../components/DischargeInfo";
-import CommodityInfo from "../components/CommodityInfo";
-import ButtonWidth from "../components/ButtonWidth";
-import BottomMenu from "../components/BottomMenu";
+import HeaderDCommon from "../driver/components/HeaderDCommon";
+import LoadingInfo from "../driver/components/LoadingInfo";
+import DischargeInfo from "../driver/components/DischargeInfo";
+import CommodityInfo from "../driver/components/CommodityInfo";
+import ButtonWidth from "../driver/components/ButtonWidth";
+import BottomMenu from "../driver/components/BottomMenu";
 
 const EndLoading = () => {
   return (

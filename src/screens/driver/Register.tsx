@@ -1,7 +1,7 @@
 import React, { useRef, useState }  from "react";
 import { Text, StyleSheet, View } from "react-native";
-import LoginLogo from "../components/LoginLogo";
-import MainButton from "../components/MainButton";
+import LoginLogo from "../driver/components/LoginLogo";
+import MainButton from "../driver/components/MainButton";
 import PhoneInput from "@therightfit/react-native-phone-number-input"
 
 const Register = () => {

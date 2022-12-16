@@ -7,11 +7,11 @@ import {
   View,
   ImageBackground,
 } from "react-native";
-import HeaderWelcome from "../components/HeaderWelcome";
-import ConfirmButton from "../components/ConfirmButton";
-import IgnoreButton from "../components/IgnoreButton";
-import CompletedShipment from "../components/CompletedShipment";
-import BottomMenu from "../components/BottomMenu";
+import HeaderWelcome from "../driver/components/HeaderWelcome";
+import ConfirmButton from "../driver/components/ConfirmButton";
+import IgnoreButton from "../driver/components/IgnoreButton";
+import CompletedShipment from "../driver/components/CompletedShipment";
+import BottomMenu from "../driver/components/BottomMenu";
 
 const Home = () => {
   return (

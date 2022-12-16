@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import { Text, StyleSheet, View } from "react-native";
-import LoginLogo from "../components/LoginLogo";
-import CheckboxLabel from "../components/CheckboxLabel";
-import MainButton from "../components/MainButton";
-import CheckBox from "../components/CheckboxCustom";
+import LoginLogo from "../driver/components/LoginLogo";
+import CheckboxLabel from "../driver/components/CheckboxLabel";
+import MainButton from "../driver/components/MainButton";
+import CheckBox from "../driver/components/CheckboxCustom";
 
 const LoginAs = () => {
   const [userType, setUserType] = useState(false);

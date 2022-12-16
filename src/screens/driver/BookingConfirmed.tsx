@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ScrollView, Text, StyleSheet, Image, View } from "react-native";
-import HeaderWelcome from "../components/HeaderWelcome";
-import CompletedShipment from "../components/CompletedShipment";
-import BottomMenu from "../components/BottomMenu";
+import HeaderWelcome from "../driver/components/HeaderWelcome";
+import CompletedShipment from "../driver/components/CompletedShipment";
+import BottomMenu from "../driver/components/BottomMenu";
 
 const BookingConfirmed = () => {
   return (

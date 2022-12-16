@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
-import HeaderD from "../components/HeaderD";
-import ButtonWidth from "../components/ButtonWidth";
-import BottomMenu from "../components/BottomMenu";
+import HeaderD from "../driver/components/HeaderD";
+import ButtonWidth from "../driver/components/ButtonWidth";
+import BottomMenu from "../driver/components/BottomMenu";
 
 const Info = () => {
   return (

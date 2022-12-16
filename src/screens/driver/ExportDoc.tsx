@@ -2,9 +2,9 @@ import * as React from "react";
 import { useState } from "react";
 import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
 import { RadioButton as RNPRadioButton } from "react-native-paper";
-import HeaderD from "../components/HeaderD";
-import DownloadButton from "../components/DownloadButton";
-import ButtonWidth from "../components/ButtonWidth";
+import HeaderD from "../driver/components/HeaderD";
+import DownloadButton from "../driver/components/DownloadButton";
+import ButtonWidth from "../driver/components/ButtonWidth";
 
 const ExportDoc = () => {
   const [frameRadioValue, setFrameRadioValue] = useState("Comercial Invoice");

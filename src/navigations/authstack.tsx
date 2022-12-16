@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import Home from '../screens/Home';
-import ArrivedBorder from '../screens/driver/ArrivedBorder';
-import ArrivedLoading from '../screens/ArrivedLoading';
-import LoginAs from '../screens/LoginAs';
-import Register from '../screens/Register';
+import LoginAs from '../screens/driver/LoginAs';
 
 // create a component
-const Authstack = (Stack) => {
+const Authstack = (Stack:any) => {
     return (
         <Stack.Navigator screenOptions={{
             headerShown: false
