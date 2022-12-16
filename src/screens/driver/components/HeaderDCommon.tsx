@@ -14,7 +14,7 @@ const HeaderDCommon = () => {
             <Image
               style={styles.ellipseIcon}
               resizeMode="cover"
-              source={require("../assets/ellipse-88.png")}
+              source={require("../../../assets/ellipse-88.png")}
             />
           </View>
           <View style={[styles.freightCostView, styles.mt13]}>
@@ -31,7 +31,7 @@ const HeaderDCommon = () => {
             <Image
               style={styles.ellipseIcon1}
               resizeMode="cover"
-              source={require("../assets/ellipse-88.png")}
+              source={require("../../../assets/ellipse-88.png")}
             />
           </View>
         </View>
@@ -39,7 +39,7 @@ const HeaderDCommon = () => {
           <Image
             style={styles.ellipseIcon2}
             resizeMode="cover"
-            source={require("../assets/ellipse-77.png")}
+            source={require("../../../assets/ellipse-77.png")}
           />
           <Text style={[styles.quarki12456Text, styles.mt2]}>Quarki 12456</Text>
         </View>

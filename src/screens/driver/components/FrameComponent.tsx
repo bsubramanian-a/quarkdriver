@@ -12,27 +12,27 @@ const FrameComponent = ({ style }: FrameComponentType) => {
         <Image
           style={styles.settingIcon}
           resizeMode="cover"
-          source={require("../assets/setting16.png")}
+          source={require("../../../assets/setting16.png")}
         />
         <Image
           style={[styles.homeIcon, styles.ml40]}
           resizeMode="cover"
-          source={require("../assets/home16.png")}
+          source={require("../../../assets/home16.png")}
         />
         <Image
           style={[styles.profileIcon, styles.ml40]}
           resizeMode="cover"
-          source={require("../assets/profile16.png")}
+          source={require("../../../assets/profile16.png")}
         />
         <Image
           style={[styles.fluentgift16FilledIcon, styles.ml40]}
           resizeMode="cover"
-          source={require("../assets/fluentgift16filled16.png")}
+          source={require("../../../assets/fluentgift16filled16.png")}
         />
         <Image
           style={[styles.notificationIcon, styles.ml40]}
           resizeMode="cover"
-          source={require("../assets/notification16.png")}
+          source={require("../../../assets/notification16.png")}
         />
       </View>
     </View>

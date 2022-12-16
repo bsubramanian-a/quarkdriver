@@ -9,7 +9,7 @@ const CompletedShipment = () => {
           <Image
             style={styles.groupIcon}
             resizeMode="cover"
-            source={require("../assets/group-541.png")}
+            source={require("../../../assets/group-541.png")}
           />
         </View>
         <View style={[styles.frameView1, styles.ml7]}>
@@ -24,7 +24,7 @@ const CompletedShipment = () => {
         <Image
           style={[styles.unionIcon, styles.ml10]}
           resizeMode="cover"
-          source={require("../assets/union.png")}
+          source={require("../../../assets/union.png")}
         />
       </View>
     </View>

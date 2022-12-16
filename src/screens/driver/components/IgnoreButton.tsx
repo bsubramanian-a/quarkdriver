@@ -3,7 +3,7 @@ import { Pressable, Text, StyleSheet } from "react-native";
 
 const IgnoreButton = () => {
   return (
-    <Pressable style={[styles.framePressable, styles.ml12]}>
+    <Pressable style={[styles.framePressable]}>
       <Text style={styles.ignoreText}>Ignore</Text>
     </Pressable>
   );

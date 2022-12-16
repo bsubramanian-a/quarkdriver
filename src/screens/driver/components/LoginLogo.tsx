@@ -6,12 +6,12 @@ const LoginLogo = () => {
     <ImageBackground
       style={styles.frameIcon}
       resizeMode="stretch"
-      source={require("../assets/frame481.png")}
+      source={require("../../../assets/frame481.png")}
     >
       <Image
         style={styles.lOGO13}
         resizeMode="cover"
-        source={require("../assets/logo-1-3.png")}
+        source={require("../../../assets/logo-1-3.png")}
       />
       <Text style={[styles.qUARKText, styles.mt_7]}>QUARK</Text>
     </ImageBackground>

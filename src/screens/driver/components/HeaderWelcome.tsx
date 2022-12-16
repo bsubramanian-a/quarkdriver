@@ -14,7 +14,7 @@ const HeaderWelcome = () => {
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-771.png")}
+          source={require("../../../assets/ellipse-771.png")}
         />
       </View>
     </View>

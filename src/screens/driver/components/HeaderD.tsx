@@ -14,7 +14,7 @@ const HeaderD = () => {
             <Image
               style={styles.ellipseIcon}
               resizeMode="cover"
-              source={require("../assets/ellipse-88.png")}
+              source={require("../../../assets/ellipse-88.png")}
             />
           </View>
           <View style={[styles.freightCostView, styles.mt13]}>
@@ -31,7 +31,7 @@ const HeaderD = () => {
             <Image
               style={styles.ellipseIcon1}
               resizeMode="cover"
-              source={require("../assets/ellipse-88.png")}
+              source={require("../../../assets/ellipse-88.png")}
             />
           </View>
         </View>
@@ -39,7 +39,7 @@ const HeaderD = () => {
           <Image
             style={styles.logisticIcon2}
             resizeMode="cover"
-            source={require("../assets/56263-logistic-icon-2.png")}
+            source={require("../../../assets/56263-logistic-icon-2.png")}
           />
         </View>
       </View>

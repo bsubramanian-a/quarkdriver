@@ -7,7 +7,7 @@ type MainButtonType = {
 
 const MainButton = ({ submit }: MainButtonType) => {
   return (
-    <Pressable style={[styles.framePressable, styles.mt30]}>
+    <Pressable style={[styles.framePressable]}>
       <Text style={styles.submitText}>{submit}</Text>
     </Pressable>
   );

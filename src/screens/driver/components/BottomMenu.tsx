@@ -7,27 +7,27 @@ const BottomMenu = () => {
       <Image
         style={styles.settingIcon}
         resizeMode="cover"
-        source={require("../assets/setting.png")}
+        source={require("../../../assets/setting.png")}
       />
       <Image
         style={styles.homeIcon}
         resizeMode="cover"
-        source={require("../assets/home.png")}
+        source={require("../../../assets/home.png")}
       />
       <Image
         style={styles.profileIcon}
         resizeMode="cover"
-        source={require("../assets/profile.png")}
+        source={require("../../../assets/profile.png")}
       />
       <Image
         style={styles.fluentgift16FilledIcon}
         resizeMode="cover"
-        source={require("../assets/fluentgift16filled.png")}
+        source={require("../../../assets/fluentgift16filled.png")}
       />
       <Image
         style={styles.notificationIcon}
         resizeMode="cover"
-        source={require("../assets/notification.png")}
+        source={require("../../../assets/notification.png")}
       />
     </View>
   );

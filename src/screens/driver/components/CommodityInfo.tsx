@@ -3,12 +3,12 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 const CommodityInfo = () => {
   return (
-    <View style={[styles.commodityInfoView, styles.mt21]}>
+    <View style={[styles.commodityInfoView]}>
       <View style={styles.frameView}>
         <Image
           style={styles.vectorIcon}
           resizeMode="cover"
-          source={require("../assets/vector.png")}
+          source={require("../../../assets/vector.png")}
         />
         <Text style={[styles.commodityInformationText, styles.ml6]}>
           Commodity Information
@@ -19,7 +19,7 @@ const CommodityInfo = () => {
           <Image
             style={styles.vectorIcon1}
             resizeMode="cover"
-            source={require("../assets/vector8.png")}
+            source={require("../../../assets/vector8.png")}
           />
           <View style={styles.frameView1}>
             <Text style={styles.commodityNameText}>Commodity Name</Text>
@@ -36,7 +36,7 @@ const CommodityInfo = () => {
           <Image
             style={styles.vectorIcon2}
             resizeMode="cover"
-            source={require("../assets/vector9.png")}
+            source={require("../../../assets/vector9.png")}
           />
         </View>
       </View>
@@ -115,8 +115,8 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   pakagingText: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   pakagingText1: {
     position: "relative",

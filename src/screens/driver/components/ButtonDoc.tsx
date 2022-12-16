@@ -8,7 +8,7 @@ type ButtonDocType = {
 
 const ButtonDoc = ({ exportAndShipping, documentsRequest }: ButtonDocType) => {
   return (
-    <Pressable style={[styles.buttonPressable, styles.mt7]}>
+    <Pressable style={[styles.buttonPressable]}>
       <Text style={styles.exportAndShippingDocuments}>
         <Text style={styles.exportAndShipping}>{exportAndShipping}</Text>
         <Text style={styles.documentsRequestText}>{documentsRequest}</Text>
@@ -19,8 +19,8 @@ const ButtonDoc = ({ exportAndShipping, documentsRequest }: ButtonDocType) => {
 
 const styles = StyleSheet.create({
   exportAndShipping: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   documentsRequestText: {
     margin: 0,

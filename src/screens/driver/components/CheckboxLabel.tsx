@@ -9,7 +9,7 @@ type CheckboxLabelType = {
 
 const CheckboxLabel = ({ driver }: CheckboxLabelType) => {
   const [rectangleCheckboxchecked, setRectangleCheckboxchecked] =
-    useState(undefined);
+    useState(false);
 
   return (
     <View style={styles.frameView}>

@@ -3,12 +3,12 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 const DischargeInfo = () => {
   return (
-    <View style={[styles.dischargeInfoView, styles.mt21]}>
+    <View style={[styles.dischargeInfoView]}>
       <View style={styles.frameView}>
         <Image
           style={styles.vectorIcon}
           resizeMode="cover"
-          source={require("../assets/vector.png")}
+          source={require("../../../assets/vector.png")}
         />
         <Text style={[styles.dischargeInformationText, styles.ml6]}>
           Discharge Information
@@ -21,7 +21,7 @@ const DischargeInfo = () => {
               <Image
                 style={styles.vectorIcon1}
                 resizeMode="cover"
-                source={require("../assets/vector2.png")}
+                source={require("../../../assets/vector2.png")}
               />
               <View style={[styles.frameView1, styles.ml7]}>
                 <Text style={styles.agentText}>Agent</Text>
@@ -34,7 +34,7 @@ const DischargeInfo = () => {
               <Image
                 style={styles.vectorIcon2}
                 resizeMode="cover"
-                source={require("../assets/vector12.png")}
+                source={require("../../../assets/vector12.png")}
               />
               <View style={[styles.frameView3, styles.ml7]}>
                 <Text style={styles.addressText}>Address</Text>
@@ -52,7 +52,7 @@ const DischargeInfo = () => {
               <Image
                 style={styles.vectorIcon3}
                 resizeMode="cover"
-                source={require("../assets/vector3.png")}
+                source={require("../../../assets/vector3.png")}
               />
               <View style={[styles.frameView6, styles.ml7]}>
                 <Text style={styles.phoneNumberText}>Phone Number</Text>
@@ -62,7 +62,7 @@ const DischargeInfo = () => {
             <Image
               style={[styles.groupIcon, styles.mt10]}
               resizeMode="cover"
-              source={require("../assets/group-526.png")}
+              source={require("../../../assets/group-526.png")}
             />
           </View>
         </View>
@@ -155,8 +155,8 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   atatrkBulvarText: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   dermanSkNo: {
     margin: 0,

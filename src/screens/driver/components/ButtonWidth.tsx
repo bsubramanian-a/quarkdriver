@@ -7,7 +7,7 @@ type ButtonWidthType = {
 
 const ButtonWidth = ({ endOfLoading }: ButtonWidthType) => {
   return (
-    <Pressable style={[styles.buttonPressable, styles.mt21]}>
+    <Pressable style={[styles.buttonPressable]}>
       <Text style={styles.endOfLoading}>{endOfLoading}</Text>
     </Pressable>
   );
