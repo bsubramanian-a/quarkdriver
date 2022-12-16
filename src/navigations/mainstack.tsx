@@ -33,9 +33,9 @@ import React, { Component } from 'react';
 // import CustomDrawer from "../Components/CustomDrawer";
 // import News from '../Screens/news';
 // import Notifications from "../Screens/notifications";
-
+//Drawer
 // create a component
-const Mainstack = (Drawer) => {
+const Mainstack = () => {
     return (
         <></>
         // <Drawer.Navigator useLegacyImplementation='true' initialRouteName="HomeNewUser" drawerContent={props => <CustomDrawer {...props} />} screenOptions={{

@@ -108,8 +108,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   dearQuarki12456: {
-    marginBlockStart: 0,
-    marginBlockEnd: 5,
+    marginStart: 0,
+    marginEnd: 5,
   },
   bookingNumberFor: {
     margin: 0,

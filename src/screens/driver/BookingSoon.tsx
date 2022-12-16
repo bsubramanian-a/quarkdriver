@@ -24,17 +24,9 @@ const BookingSoon = () => {
               </Text>
               <View style={[styles.frameView1, styles.mt_8]}>
                 <View style={styles.frameView}>
-                  <Image
-                    style={styles.rectangleIcon}
-                    resizeMode="cover"
-                    source={require("../assets/rectangle-291.png")}
-                  />
+                  <Image style={styles.rectangleIcon} resizeMode="cover" source={require("../../assets/rectangle-291.png")} />
                 </View>
-                <Image
-                  style={[styles.rectangleIcon1, styles.ml7]}
-                  resizeMode="cover"
-                  source={require("../assets/rectangle-290.png")}
-                />
+                <Image style={[styles.rectangleIcon1, styles.ml7]} resizeMode="cover" source={require("../../assets/rectangle-290.png")} />
               </View>
             </View>
           </View>
@@ -64,8 +56,8 @@ const styles = StyleSheet.create({
     paddingTop: 81,
   },
   dearQuarki12456: {
-    marginBlockStart: 0,
-    marginBlockEnd: 5,
+    marginStart: 0,
+    marginEnd: 5,
   },
   keepSafeText: {
     margin: 0,

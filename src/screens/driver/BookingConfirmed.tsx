@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
   dearQuarki124561: {
-    marginBlockStart: 0,
-    marginBlockEnd: 5,
+    marginStart: 0,
+    marginEnd: 5,
   },
   youAreOn: {
     color: "#fff",

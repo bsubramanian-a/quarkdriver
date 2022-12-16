@@ -149,8 +149,8 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   pakagingText: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   pakagingText1: {
     position: "relative",
