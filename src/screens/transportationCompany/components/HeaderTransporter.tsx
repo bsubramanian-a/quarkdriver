@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Image } from "react-native";
-import TInput from "../components/TInput";
+import TInput from "./TInput";
 
 const HeaderTransporter = () => {
   return (

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
-import CompletedInfo from "../components/CompletedInfo";
+import CompletedInfo from "./CompletedInfo";
 
 const CompletedTab = () => {
   return (
