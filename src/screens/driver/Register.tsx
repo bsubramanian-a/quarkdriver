@@ -27,7 +27,6 @@ const Register = () => {
             textInputStyle={styles.textInputStyle}
             containerStyle={styles.containerStyle}
             textContainerStyle={styles.textContainerStyle}
-            codeTextStyle={styles.codeTextStyle}
             flagButtonStyle={styles.flagButtonStyle}
             onChangeText={(text) => {
               setValue(text);
@@ -47,20 +46,26 @@ const Register = () => {
 
 const styles = StyleSheet.create({
   flagButtonStyle:{
-    borderWidth:3,
-    borderColor: "orange"
-  },
-  codeTextStyle:{
     borderWidth:1,
-    borderColor: "magenta"
+    borderColor: "#5469B1",
+    backgroundColor: "#fff",
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
+    marginRight: -1,
+    borderRadius: 10
   },
   textContainerStyle: {
     borderWidth:1,
-    borderColor: "yellow"
+    borderColor: "#5469B1",
+    backgroundColor: "#fff",
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+    borderRadius: 10
   },
   containerStyle: {
-    borderWidth:1,
-    borderColor: "green"
+    width: "100%",
+    borderRadius:10,
+    marginBottom: 85
   },
   mt20: {
     marginTop: 20,
@@ -100,10 +105,8 @@ const styles = StyleSheet.create({
   textInputStyle: {
     alignSelf: "stretch",
     position: "relative",
-    height: 57,
+    height: 36,
     flexShrink: 0,
-    borderColor:"red",
-    borderWidth:1,
     fontFamily: "Roboto"
   },
   frameView1: {
@@ -114,8 +117,6 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
     alignItems: "center",
     justifyContent: "flex-start",
-    borderWidth: 1,
-    borderColor: "blue"
   },
   registerView: {
     position: "relative",

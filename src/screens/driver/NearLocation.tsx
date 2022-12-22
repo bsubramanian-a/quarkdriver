@@ -5,12 +5,11 @@ import LoadingInfo from "../driver/components/LoadingInfo";
 import DischargeInfo from "../driver/components/DischargeInfo";
 import CommodityInfo from "../driver/components/CommodityInfo";
 import ButtonWidth from "../driver/components/ButtonWidth";
-import ButtonDoc from "../driver/components/ButtonDoc";
 import BottomMenu from "../driver/components/BottomMenu";
 
-const EndOfficial = () => {
+const NearLocation = () => {
   return (
-    <View style={styles.endOfficialView}>
+    <View style={styles.nearLocationView}>
       <HeaderDCommon />
       <ScrollView
         style={styles.frameScrollView}
@@ -20,13 +19,7 @@ const EndOfficial = () => {
         <LoadingInfo loadingInformation="Loading Information" />
         <DischargeInfo />
         <CommodityInfo />
-        <View style={[styles.frameView, styles.mt21]}>
-          <ButtonWidth endOfLoading="End of official export procedure" />
-          <ButtonDoc
-            exportAndShipping="Export and Shipping "
-            documentsRequest="Documents Request"
-          />
-        </View>
+        <ButtonWidth endOfLoading="Near to discharge Location" />
       </ScrollView>
       <BottomMenu />
     </View>
@@ -34,9 +27,6 @@ const EndOfficial = () => {
 };
 
 const styles = StyleSheet.create({
-  mt7: {
-    marginTop: 7,
-  },
   mt21: {
     marginTop: 21,
   },
@@ -46,21 +36,16 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 20,
   },
-  frameView: {
-    alignSelf: "stretch",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   frameScrollView: {
     alignSelf: "stretch",
     boxSizing: "border-box",
     flex: 1,
   },
-  endOfficialView: {
+  nearLocationView: {
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
+    height: 815,
     overflow: "hidden",
     flexDirection: "column",
     alignItems: "center",
@@ -68,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EndOfficial;
+export default NearLocation;

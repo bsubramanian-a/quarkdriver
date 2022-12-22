@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     marginTop: 38,
   },
   pleaseChooseOneOfFollowing: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -66,7 +65,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   loginAsView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

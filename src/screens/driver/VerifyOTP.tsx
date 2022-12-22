@@ -1,4 +1,5 @@
 import * as React from "react";
+import LoginLogo from "../driver/components/LoginLogo";
 import {
   Image,
   StyleSheet,
@@ -11,18 +12,7 @@ import {
 const VerifyOTP = () => {
   return (
     <View style={styles.verifyOTPView}>
-      <ImageBackground
-        style={styles.frameIcon}
-        resizeMode="stretch"
-        source={require("../assets/frame481.png")}
-      >
-        <Image
-          style={styles.lOGO13}
-          resizeMode="cover"
-          source={require("../assets/logo-1-31.png")}
-        />
-        <Text style={[styles.qUARKText, styles.mt_7]}>QUARK</Text>
-      </ImageBackground>
+      <LoginLogo />
       <View style={[styles.frameView, styles.mt38]}>
         <Text style={styles.welcomeToQuark}>Welcome to Quark</Text>
         <Text style={[styles.pleaseEnterYourOTPNumber, styles.mt20]}>
@@ -62,14 +52,12 @@ const styles = StyleSheet.create({
     marginTop: 38,
   },
   lOGO13: {
-    position: "relative",
     width: 99,
     height: 99,
     flexShrink: 0,
     overflow: "hidden",
   },
   qUARKText: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -91,7 +79,6 @@ const styles = StyleSheet.create({
   },
   welcomeToQuark: {
     alignSelf: "stretch",
-    position: "relative",
     fontSize: 18,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -100,7 +87,6 @@ const styles = StyleSheet.create({
   },
   pleaseEnterYourOTPNumber: {
     alignSelf: "stretch",
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#1a3596",
@@ -116,14 +102,12 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text: {
-    position: "relative",
     fontSize: 13,
     fontFamily: "Roboto",
     color: "#b6bfdd",
     textAlign: "left",
   },
   text1: {
-    position: "relative",
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#b6bfdd",
@@ -143,14 +127,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   resendOTPCode: {
-    position: "relative",
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#ffb300",
     textAlign: "left",
   },
   submitText: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -184,7 +166,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   verifyOTPView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

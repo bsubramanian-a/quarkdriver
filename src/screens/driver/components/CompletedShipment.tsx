@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   groupIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
@@ -53,7 +52,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text: {
-    position: "relative",
     fontSize: 24,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -61,7 +59,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   completedShipmentText: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -79,14 +76,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   viewAllText: {
-    position: "relative",
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#ffb300",
     textAlign: "left",
   },
   unionIcon: {
-    position: "relative",
     width: 5.71,
     height: 9.71,
     flexShrink: 0,

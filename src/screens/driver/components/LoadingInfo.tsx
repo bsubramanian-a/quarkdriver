@@ -43,10 +43,7 @@ const LoadingInfo = ({ loadingInformation }: LoadingInfoType) => {
               <View style={[styles.frameView3, styles.ml7]}>
                 <Text style={styles.addressText}>Address</Text>
                 <Text style={[styles.atatrkBulvarDermanSkNo, styles.mt4]}>
-                  <Text style={styles.atatrkBulvarText}>Atatürk Bulvarı</Text>
-                  <Text style={styles.dermanSkNo}>
-                    Derman Sk. No: 29 06050 Opera, Ulus, ANKARA
-                  </Text>
+                  <Text style={styles.atatrkBulvarText}>Atatürk Bulvar Derman Sk. No: 29 06050 Opera, Ulus, ANKARA</Text>
                 </Text>
               </View>
             </View>
@@ -114,13 +111,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon1: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   agentText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -128,7 +123,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mrKatrinSalvomo: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -145,13 +139,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon2: {
-    position: "relative",
     width: 14,
     height: 20,
     flexShrink: 0,
   },
   addressText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -166,12 +158,10 @@ const styles = StyleSheet.create({
     margin: 0,
   },
   atatrkBulvarDermanSkNo: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
     textAlign: "left",
-    width: 125,
   },
   frameView3: {
     flexDirection: "column",
@@ -187,18 +177,17 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   frameView5: {
+    width: "45%",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   vectorIcon3: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   phoneNumberText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -206,7 +195,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -223,7 +211,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   groupIcon: {
-    position: "relative",
     width: 62,
     height: 62,
     flexShrink: 0,

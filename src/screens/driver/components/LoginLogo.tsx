@@ -23,14 +23,12 @@ const styles = StyleSheet.create({
     marginTop: -7,
   },
   lOGO13: {
-    position: "relative",
     width: 99,
     height: 99,
     flexShrink: 0,
     overflow: "hidden",
   },
   qUARKText: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",

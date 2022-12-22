@@ -26,7 +26,7 @@ const Home = () => {
           <ImageBackground
             style={styles.frameIcon}
             resizeMode="stretch"
-            source={require("../assets/frame4811.png")}
+            source={require("../../assets/frame4811.png")}
           >
             <View style={styles.frameView2}>
               <Text style={styles.cONGRATULATIONText}>CONGRATULATION!</Text>
@@ -34,7 +34,7 @@ const Home = () => {
                 <Text style={styles.dearQuarki12456BookingNum}>
                   <Text
                     style={styles.dearQuarki12456}
-                  >{`Dear Quarki 12456 `}</Text>
+                  >Dear Quarki 12456{'\n'}</Text>
                   <Text style={styles.bookingNumberFor}>
                     Booking number for your new trip
                   </Text>
@@ -43,22 +43,22 @@ const Home = () => {
                   style={[styles.frameTextInput, styles.mt14]}
                   keyboardType="default"
                 />
-                <View style={[styles.frameView, styles.mt14]}>
-                  <View style={styles.groupView}>
-                    <Text style={styles.turkeyAnkaraText}>Turkey, Ankara</Text>
+                <View style={styles.frameView}>
+                  <View style={[styles.groupView, styles.mt14]}>
                     <Text style={styles.fromText}>From</Text>
+                    <Text style={styles.turkeyAnkaraText}>Turkey, Ankara</Text>  
                   </View>
                   <View style={[styles.groupView1, styles.mt26]}>
+                    <Text style={styles.toText}>To</Text>
                     <Text style={styles.hamburgGermanyText}>
                       Hamburg, Germany
                     </Text>
-                    <Text style={styles.toText}>To</Text>
                   </View>
                   <View style={[styles.groupView2, styles.mt26]}>
-                    <Text style={styles.uSDText}>5000 USD</Text>
                     <Text style={styles.freightCostperTon}>
                       Freight cost(per ton)
                     </Text>
+                    <Text style={styles.uSDText}>5000 USD</Text>
                   </View>
                 </View>
               </View>
@@ -125,7 +125,8 @@ const styles = StyleSheet.create({
   frameTextInput: {
     borderRadius: 10,
     backgroundColor: "#fff",
-    height: 29,
+    height: 36,
+    width: 200,
     flexShrink: 0,
     overflow: "hidden",
     justifyContent: "center",
@@ -133,9 +134,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   turkeyAnkaraText: {
-    position: "absolute",
-    top: 23,
-    left: 0,
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -143,25 +141,19 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   fromText: {
-    position: "absolute",
-    top: 0,
-    left: 34,
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
     color: "#fff",
+    marginBottom: 8,
     textAlign: "center",
   },
   groupView: {
-    position: "relative",
-    width: 107,
-    height: 42,
+    alignSelf: "stretch",
+    textAlign: 'center',
     flexShrink: 0,
   },
   hamburgGermanyText: {
-    position: "absolute",
-    top: 23,
-    left: 0,
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -169,9 +161,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   toText: {
-    position: "absolute",
-    top: 0,
-    left: 59,
+    marginBottom: 8,
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -179,15 +169,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   groupView1: {
-    position: "relative",
-    width: 140,
-    height: 42,
+    alignSelf: "stretch",
+    textAlign: 'center',
     flexShrink: 0,
   },
   uSDText: {
-    position: "absolute",
-    top: 23,
-    left: 36,
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -195,9 +181,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   freightCostperTon: {
-    position: "absolute",
-    top: 0,
-    left: 0,
+    marginBottom: 8,
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -205,9 +189,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   groupView2: {
-    position: "relative",
-    width: 147,
-    height: 42,
+    alignSelf: "stretch",
+    textAlign: 'center',
     flexShrink: 0,
   },
   frameView: {
@@ -217,7 +200,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   frameView1: {
-    width: 241,
+    width: "100%",
     overflow: "hidden",
     flexDirection: "column",
     alignItems: "center",
@@ -262,7 +245,7 @@ const styles = StyleSheet.create({
     paddingBottom: 28,
     boxSizing: "border-box",
     alignItems: "flex-start",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
   },
   frameView5: {
     alignSelf: "stretch",

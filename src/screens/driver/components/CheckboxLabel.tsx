@@ -13,7 +13,7 @@ const CheckboxLabel = ({ driver }: CheckboxLabelType) => {
 
   return (
     <View style={styles.frameView}>
-      <View style={styles.rectangleView}>
+      <View>
         <RNPCheckbox
           status={rectangleCheckboxchecked ? "checked" : "unchecked"}
           onPress={() => setRectangleCheckboxchecked(!rectangleCheckboxchecked)}
@@ -29,11 +29,7 @@ const styles = StyleSheet.create({
   ml15: {
     marginLeft: 15,
   },
-  rectangleView: {
-    position: "relative",
-  },
   driverText: {
-    position: "relative",
     fontSize: 16,
     fontFamily: "Roboto",
     color: "#08288d",
