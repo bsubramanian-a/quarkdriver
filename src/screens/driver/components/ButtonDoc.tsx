@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     margin: 0,
   },
   exportAndShippingDocuments: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",

@@ -175,13 +175,11 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   vectorIcon: {
-    position: "relative",
     width: 20,
     height: 20,
     flexShrink: 0,
   },
   loadingInformationText: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -194,13 +192,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon1: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   agentText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -208,7 +204,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mrKatrinSalvomo: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
@@ -230,13 +225,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon2: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   phoneNumberText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -244,7 +237,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
@@ -293,13 +285,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon3: {
-    position: "relative",
     width: 20,
     height: 20,
     flexShrink: 0,
   },
   dischargeInformationText: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -318,7 +308,6 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   agentText1: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -326,7 +315,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mrKatrinSalvomo1: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
@@ -348,13 +336,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon5: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   phoneNumberText1: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -362,7 +348,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text1: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
@@ -417,7 +402,6 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   commodityInformationText: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -442,7 +426,6 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
   },
   commodityNameText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -451,7 +434,6 @@ const styles = StyleSheet.create({
     width: 97,
   },
   casticSodaText: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
@@ -467,7 +449,6 @@ const styles = StyleSheet.create({
   },
   frameView20: {
     alignSelf: "stretch",
-    position: "relative",
     width: 121.89,
     flexShrink: 0,
   },
@@ -476,7 +457,6 @@ const styles = StyleSheet.create({
     marginEnd: 0,
   },
   pakagingText1: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -486,7 +466,6 @@ const styles = StyleSheet.create({
     height: 16,
   },
   bag25Kg: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
@@ -513,7 +492,6 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
   },
   frameView22: {
-    position: "relative",
     width: 79.13,
     height: 33,
     flexShrink: 0,
@@ -538,6 +516,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+    marginBottom: 45,
   },
   frameScrollView: {
     alignSelf: "stretch",

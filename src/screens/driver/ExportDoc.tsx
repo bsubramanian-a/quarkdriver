@@ -272,7 +272,6 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   receivingExportDocuments: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -412,6 +411,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+    marginBottom: 70,
   },
   frameScrollView: {
     alignSelf: "stretch",
@@ -419,7 +419,6 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
   },
   exportDocView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

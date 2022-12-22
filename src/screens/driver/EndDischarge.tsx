@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   endDischargeView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

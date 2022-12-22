@@ -91,18 +91,9 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   vectorIcon: {
-    position: "relative",
     width: 20,
     height: 20,
     flexShrink: 0,
-  },
-  dischargeInformationText: {
-    position: "relative",
-    fontSize: 14,
-    fontWeight: "500",
-    fontFamily: "Roboto",
-    color: "#0a288f",
-    textAlign: "left",
   },
   frameView: {
     flexDirection: "row",
@@ -110,13 +101,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon1: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   agentText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -124,7 +113,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mrKatrinSalvomo: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -141,13 +129,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon2: {
-    position: "relative",
     width: 14,
     height: 20,
     flexShrink: 0,
   },
   addressText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -162,12 +148,10 @@ const styles = StyleSheet.create({
     margin: 0,
   },
   atatrkBulvarDermanSkNo: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
     textAlign: "left",
-    width: 125,
   },
   frameView3: {
     flexDirection: "column",
@@ -183,18 +167,17 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   frameView5: {
+    width: "45%",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   vectorIcon3: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
   },
   phoneNumberText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -202,7 +185,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -219,7 +201,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   groupIcon: {
-    position: "relative",
     width: 62,
     height: 62,
     flexShrink: 0,
@@ -249,6 +230,13 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+  },
+  dischargeInformationText: {
+    fontSize: 14,
+    fontWeight: "500",
+    fontFamily: "Roboto",
+    color: "#0a288f",
+    textAlign: "left",
   },
   dischargeInfoView: {
     alignSelf: "stretch",

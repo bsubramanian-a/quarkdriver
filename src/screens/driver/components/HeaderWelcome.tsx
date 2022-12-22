@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     color: "#e7e9f4",
     textAlign: "left",
-    width: 128,
+    width: "100%",
   },
   quarki12456Text: {
     position: "relative",

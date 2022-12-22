@@ -7,17 +7,22 @@ const HeaderDCommon = () => {
       <View style={styles.frameView4}>
         <View style={styles.frameView2}>
           <View style={styles.shipmentNumberView}>
-            <View style={styles.frameView}>
-              <Text style={styles.shipmentNumberText}>Shipment Number</Text>
-              <Text style={styles.text}>32156</Text>
-            </View>
             <Image
               style={styles.ellipseIcon}
               resizeMode="cover"
               source={require("../../../assets/ellipse-88.png")}
             />
+            <View style={styles.frameView}>
+              <Text style={styles.shipmentNumberText}>Shipment Number</Text>
+              <Text style={styles.text}>32156</Text>
+            </View>
           </View>
           <View style={[styles.freightCostView, styles.mt13]}>
+            <Image
+              style={styles.ellipseIcon1}
+              resizeMode="cover"
+              source={require("../../../assets/ellipse-88.png")}
+            />
             <View style={styles.frameView1}>
               <Text style={styles.freightCostPerTon}>
                 <Text style={styles.freightCost}>{`Freight cost `}</Text>
@@ -28,11 +33,6 @@ const HeaderDCommon = () => {
                 <Text style={styles.uSDText}>USD</Text>
               </Text>
             </View>
-            <Image
-              style={styles.ellipseIcon1}
-              resizeMode="cover"
-              source={require("../../../assets/ellipse-88.png")}
-            />
           </View>
         </View>
         <View style={styles.frameView3}>
@@ -56,43 +56,31 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   shipmentNumberText: {
-    position: "relative",
     fontSize: 16,
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "left",
-    width: 133,
-    height: 20,
   },
   text: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#ffa824",
     textAlign: "left",
-    width: 46,
-    height: 18,
   },
   frameView: {
-    position: "absolute",
-    top: 0,
-    left: 18,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   ellipseIcon: {
-    position: "absolute",
-    top: 6,
-    left: 0,
+    marginTop: 6,
+    marginEnd: 6,
     width: 8,
     height: 8,
   },
   shipmentNumberView: {
-    position: "relative",
-    width: 151,
-    height: 38,
+    flexDirection: "row",
     flexShrink: 0,
   },
   freightCost: {
@@ -102,12 +90,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   freightCostPerTon: {
-    position: "relative",
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "left",
-    width: 143,
-    height: 20,
   },
   text1: {
     fontSize: 16,
@@ -119,31 +104,22 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
   },
   uSDText1: {
-    position: "relative",
     color: "#ffa824",
     textAlign: "left",
-    width: 59,
-    height: 18,
   },
   frameView1: {
-    position: "absolute",
-    top: 0,
-    left: 18,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   ellipseIcon1: {
-    position: "absolute",
-    top: 6,
-    left: 0,
+    marginTop: 6,
+    marginEnd: 6,
     width: 8,
     height: 8,
   },
   freightCostView: {
-    position: "relative",
-    width: 161,
-    height: 38,
+    flexDirection: "row",
     flexShrink: 0,
   },
   frameView2: {
@@ -152,13 +128,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   ellipseIcon2: {
-    position: "relative",
     width: 50,
     height: 52,
     flexShrink: 0,
   },
   quarki12456Text: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -186,9 +160,7 @@ const styles = StyleSheet.create({
     flexShrink: 0,
     overflow: "hidden",
     flexDirection: "row",
-    paddingHorizontal: 16,
-    paddingTop: 54,
-    paddingBottom: 16,
+    padding: 16,
     boxSizing: "border-box",
     alignItems: "flex-end",
     justifyContent: "center",

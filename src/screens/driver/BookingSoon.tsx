@@ -19,8 +19,7 @@ const BookingSoon = () => {
               <Text style={styles.dearQuarki12456WeWillSen}>
                 <Text
                   style={styles.dearQuarki12456}
-                >{`Dear Quarki 12456, We will send you your booking number soon `}</Text>
-                <Text style={styles.keepSafeText}>keep safe</Text>
+                >{`Dear Quarki 12456, We will send you your booking number soon keep safe`}</Text>
               </Text>
               <View style={[styles.frameView1, styles.mt_8]}>
                 <View style={styles.frameView}>
@@ -59,29 +58,20 @@ const styles = StyleSheet.create({
     marginStart: 0,
     marginEnd: 5,
   },
-  keepSafeText: {
-    margin: 0,
-  },
   dearQuarki12456WeWillSen: {
-    position: "relative",
     fontSize: 16,
     lineHeight: 22,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#1a3596",
     textAlign: "center",
-    width: 162,
-    undefined: "",
   },
   rectangleIcon: {
-    position: "relative",
     width: 141,
     height: 60,
     flexShrink: 0,
   },
   frameView: {
-    width: 141,
-    height: 70,
     flexShrink: 0,
     flexDirection: "column",
     paddingHorizontal: 0,
@@ -91,14 +81,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   rectangleIcon1: {
-    position: "relative",
     width: 125,
     height: 194,
     flexShrink: 0,
   },
   frameView1: {
-    width: 273,
-    height: 194,
     flexShrink: 0,
     flexDirection: "row",
     alignItems: "flex-end",
@@ -108,7 +95,7 @@ const styles = StyleSheet.create({
     flex: 1,
     overflow: "hidden",
     flexDirection: "column",
-    paddingHorizontal: 42,
+    paddingHorizontal: 50,
     paddingVertical: 0,
     boxSizing: "border-box",
     alignItems: "center",
@@ -153,7 +140,6 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
   },
   bookingSoonView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

@@ -15,7 +15,6 @@ const ButtonWidth = ({ endOfLoading }: ButtonWidthType) => {
 
 const styles = StyleSheet.create({
   endOfLoading: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",

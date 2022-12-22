@@ -27,17 +27,17 @@ const CommodityInfo = () => {
           </View>
         </View>
         <View style={styles.frameView4}>
+          <Image
+            style={styles.vectorIcon2}
+            resizeMode="cover"
+            source={require("../../../assets/vector9.png")}
+          />
           <View style={styles.frameView3}>
             <Text style={styles.pakagingText1}>
               <Text style={styles.pakagingText}>{`Pakaging `}</Text>
             </Text>
             <Text style={[styles.bag25Kg, styles.mt4]}>Bag, 25 kg</Text>
           </View>
-          <Image
-            style={styles.vectorIcon2}
-            resizeMode="cover"
-            source={require("../../../assets/vector9.png")}
-          />
         </View>
       </View>
     </View>
@@ -74,19 +74,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon1: {
-    position: "absolute",
-    height: "40.91%",
-    width: "14.77%",
-    top: "1.01%",
-    right: "85.23%",
-    bottom: "58.08%",
-    left: "0%",
-    maxWidth: "100%",
-    overflow: "hidden",
-    maxHeight: "100%",
+    height: 14,
+    width: 18,
+    marginEnd: 7
   },
   commodityNameText: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -94,24 +86,19 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   casticSodaText: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
     textAlign: "left",
   },
   frameView1: {
-    position: "absolute",
-    top: 0,
-    left: 25,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   frameView2: {
-    position: "relative",
-    width: 121.89,
-    height: 33,
+    flexDirection: "row",
+    width: "50%",
     flexShrink: 0,
   },
   pakagingText: {
@@ -119,46 +106,33 @@ const styles = StyleSheet.create({
     marginEnd: 0,
   },
   pakagingText1: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#e7e9f4",
     textAlign: "left",
-    width: 53,
-    height: 16,
   },
   bag25Kg: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
     textAlign: "left",
   },
   frameView3: {
-    position: "absolute",
-    top: 0,
-    left: 27,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   vectorIcon2: {
-    position: "absolute",
-    height: "42.42%",
-    width: "25.27%",
-    top: "3.15%",
-    right: "74.73%",
-    bottom: "54.42%",
-    left: "0%",
-    maxWidth: "100%",
-    overflow: "hidden",
-    maxHeight: "100%",
+    height: 14,
+    width: 20,
+    marginEnd: 7,
   },
   frameView4: {
-    position: "relative",
-    width: 79.13,
-    height: 33,
+    width: "50%",
+    alignItems: "flex-start",
+    justifyContent: "flex-end",
+    flexDirection: "row",
     flexShrink: 0,
   },
   frameView5: {
@@ -181,7 +155,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
-    marginBottom:21
+    marginBottom: 21
   },
 });
 

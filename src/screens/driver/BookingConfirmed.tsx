@@ -15,20 +15,10 @@ const BookingConfirmed = () => {
       >
         <View style={styles.frameView2}>
           <View style={styles.frameView1}>
-            <Text style={styles.dearQuarki12456YouAreOnA}>
-              <Text style={styles.dearQuarki124561}>
-                <Text
-                  style={styles.dearQuarki12456}
-                >{`Dear Quarki 12456 `}</Text>
-              </Text>
-              <Text style={styles.youAreOnAMissinonOf18345}>
-                <Text
-                  style={styles.youAreOn}
-                >{`You are on a missinon of `}</Text>
-                <Text style={styles.text}>{`18345 `}</Text>
-                <Text style={styles.bookingNumberText}>booking number</Text>
-              </Text>
-            </Text>
+            <Text
+              style={styles.dearQuarki12456}
+            >Dear Quarki 12456 {"\n"} You are on a mission of
+              <Text style={styles.text}> 18345</Text> booking number</Text>
             <Text style={[styles.feelFreeToContactUsForAn, styles.mt12]}>
               Feel free to contact us for any assistant good luck
             </Text>
@@ -64,10 +54,12 @@ const styles = StyleSheet.create({
   },
   dearQuarki12456: {
     color: "#fff",
-  },
-  dearQuarki124561: {
+    fontSize: 16,
+    fontWeight: "700",
+    fontFamily: "Roboto",
+    textAlign: "center",
     marginStart: 0,
-    marginEnd: 5,
+    marginEnd: 5
   },
   youAreOn: {
     color: "#fff",
@@ -78,34 +70,19 @@ const styles = StyleSheet.create({
   bookingNumberText: {
     color: "#fff",
   },
-  youAreOnAMissinonOf18345: {
-    margin: 0,
-  },
-  dearQuarki12456YouAreOnA: {
-    position: "relative",
-    fontSize: 16,
-    fontWeight: "700",
-    fontFamily: "Roboto",
-    textAlign: "center",
-    width: 269,
-  },
   feelFreeToContactUsForAn: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "center",
-    width: 269,
   },
   rectangleIcon: {
-    position: "relative",
     width: 177,
     height: 78,
     flexShrink: 0,
   },
   frameView: {
-    width: 273,
     flexDirection: "row",
     paddingHorizontal: 0,
     paddingTop: 32,
@@ -146,7 +123,6 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
   },
   bookingConfirmedView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

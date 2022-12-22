@@ -17,7 +17,6 @@ const MainButton = ({ submit, handleSubmit=undefined, isLoading=false }: any) =>
 
 const styles = StyleSheet.create({
   submitText: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
