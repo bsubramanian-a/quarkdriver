@@ -1,14 +1,16 @@
 import * as React from "react";
-import { Pressable, Text, StyleSheet } from "react-native";
+import { Pressable, Text, StyleSheet, ActivityIndicator } from "react-native";
 
-type MainButtonType = {
-  submit?: string;
-};
+// type MainButtonType = {
+//   submit?: string;
+//   handleSubmit:any,
+//   isLoading:boolean
+// };
 
-const MainButton = ({ submit }: MainButtonType) => {
+const MainButton = ({ submit, handleSubmit=undefined, isLoading=false }: any) => {
   return (
-    <Pressable style={[styles.framePressable]}>
-      <Text style={styles.submitText}>{submit}</Text>
+    <Pressable style={[styles.framePressable]} onPress={handleSubmit} disabled={isLoading}>
+      {!isLoading ? <Text style={styles.submitText}>{submit}</Text> : <ActivityIndicator size="small" color="#0000ff" />}
     </Pressable>
   );
 };

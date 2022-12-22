@@ -36,7 +36,7 @@ const BookingConfirmed = () => {
               <Image
                 style={styles.rectangleIcon}
                 resizeMode="cover"
-                source={require("../assets/rectangle-292.png")}
+                source={require("../../assets/rectangle-292.png")}
               />
             </View>
           </View>

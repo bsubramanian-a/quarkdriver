@@ -26,7 +26,7 @@ const Home = () => {
           <ImageBackground
             style={styles.frameIcon}
             resizeMode="stretch"
-            source={require("../assets/frame4811.png")}
+            source={require("../../assets/frame4811.png")}
           >
             <View style={styles.frameView2}>
               <Text style={styles.cONGRATULATIONText}>CONGRATULATION!</Text>

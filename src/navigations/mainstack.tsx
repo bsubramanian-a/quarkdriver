@@ -1,5 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
+import Home from '../screens/driver/Home';
 // import HomeNormal from "../../src/Screens/homenormal";
 // import HomeNewUser from "../../src/Screens/homenewuser";
 // import HomePost from "../../src/Screens/homepost";
@@ -35,49 +36,13 @@ import React, { Component } from 'react';
 // import Notifications from "../Screens/notifications";
 //Drawer
 // create a component
-const Mainstack = () => {
+const Mainstack = (Stack:any) => {
     return (
-        <></>
-        // <Drawer.Navigator useLegacyImplementation='true' initialRouteName="HomeNewUser" drawerContent={props => <CustomDrawer {...props} />} screenOptions={{
-        //     headerShown: false,
-        //     drawerPosition: "right",
-        //     openByDefault: false,
-        //     drawerWidth: 200
-        // }}>            
-        //     <Drawer.Screen name="HomeNewUser" component={HomeNewUser} />
-        //     <Drawer.Screen name="HomeNewUserl" component={HomeNewUser} />
-        //     <Drawer.Screen name="HomeNormal" component={HomeNormal} />
-        //     <Drawer.Screen name="HomePost" component={HomePost} />
-        //     <Drawer.Screen name="UserProfile" component={UserProfile} />
-        //     <Drawer.Screen name="Notifications" component={Notifications} />
-        //     <Drawer.Screen name="News" component={News} />
-        //     <Drawer.Screen name="NewCommunity1" component={NewCommunity1} />
-        //     <Drawer.Screen name="CommunityType" component={CommunityType} />
-        //     <Drawer.Screen name="CommunityLocation" component={CommunityLocation} />
-        //     <Drawer.Screen name="CommunityStandards" component={CommunityStandards} />
-        //     <Drawer.Screen name="CommunityProfileOwn" component={CommunityProfileOwn} />
-        //     <Drawer.Screen name="Sidebar" component={Sidebar} />
-        //     <Drawer.Screen name="AccountSettings" component={AccountSettings} />
-        //     <Drawer.Screen name="Bookmarks" component={Bookmarks} />
-        //     <Drawer.Screen name="CommunitiesHome" component={CommunitiesHome} />
-        //     <Drawer.Screen name="SearchCommunity" component={SearchCommunity} />
-        //     <Drawer.Screen name="CommunityDescription" component={CommunityDescription} />
-        //     <Drawer.Screen name="CommunityProfileUserView" component={CommunityProfileUserView} />
-        //     <Drawer.Screen name="CommunityPost" component={CommunityPost} />
-        //     <Drawer.Screen name="Messages" component={Messages} />
-        //     <Drawer.Screen name="Conversation" component={Conversation} />
-        //     <Drawer.Screen name="ReportStart" component={ReportStart} />
-        //     <Drawer.Screen name="ReportProcess1" component={ReportProcess1} />
-        //     <Drawer.Screen name="ReportProcess2A" component={ReportProcess2A} />
-        //     <Drawer.Screen name="ReportProcess2B" component={ReportProcess2B} />
-        //     <Drawer.Screen name="ReportProcess2C" component={ReportProcess2C} />
-        //     <Drawer.Screen name="ReportProcess3A" component={ReportProcess3A} />
-        //     <Drawer.Screen name="ReportProcess3B" component={ReportProcess3B} />
-        //     <Drawer.Screen name="ReportProcess3C" component={ReportProcess3C} />
-        //     <Drawer.Screen name="Complaintent" component={Complaintent} />
-        //     <Drawer.Screen name="InvitePeople" component={InvitePeople} />
-        //     <Drawer.Screen name="MakeAdmin" component={MakeAdmin} />
-        // </Drawer.Navigator>
+        <Stack.Navigator screenOptions={{
+            headerShown: false
+          }}>
+            <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
     );
 };
 

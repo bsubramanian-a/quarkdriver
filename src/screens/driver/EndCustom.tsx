@@ -22,7 +22,7 @@ const EndCustom = () => {
             <Image
               style={styles.vectorIcon}
               resizeMode="cover"
-              source={require("../assets/vector.png")}
+              source={require("../../assets/vector.png")}
             />
             <Text style={[styles.commodityInformationText, styles.ml6]}>
               Commodity Information
@@ -33,7 +33,7 @@ const EndCustom = () => {
               <Image
                 style={styles.vectorIcon1}
                 resizeMode="cover"
-                source={require("../assets/vector8.png")}
+                source={require("../../assets/vector8.png")}
               />
               <View style={styles.frameView1}>
                 <Text style={styles.commodityNameText}>Commodity Name</Text>
@@ -52,7 +52,7 @@ const EndCustom = () => {
               <Image
                 style={styles.vectorIcon2}
                 resizeMode="cover"
-                source={require("../assets/vector9.png")}
+                source={require("../../assets/vector9.png")}
               />
             </View>
           </View>

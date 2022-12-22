@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
-import HeaderD from "../driver/components/HeaderD";
-import ButtonWidth from "../driver/components/ButtonWidth";
-import BottomMenu from "../driver/components/BottomMenu";
+import HeaderD from "../../driver/components/HeaderD";
+import ButtonWidth from "../../driver/components/ButtonWidth";
+import BottomMenu from "../../driver/components/BottomMenu";
 
 const Info = () => {
   return (
@@ -18,7 +18,7 @@ const Info = () => {
             <Image
               style={styles.vectorIcon}
               resizeMode="cover"
-              source={require("../assets/vector1.png")}
+              source={require("../../assets/vector1.png")}
             />
             <Text style={[styles.loadingInformationText, styles.ml6]}>
               Loading Information
@@ -31,7 +31,7 @@ const Info = () => {
                   <Image
                     style={styles.vectorIcon1}
                     resizeMode="cover"
-                    source={require("../assets/vector2.png")}
+                    source={require("../../assets/vector2.png")}
                   />
                   <View style={[styles.frameView1, styles.ml7]}>
                     <Text style={styles.agentText}>Agent</Text>
@@ -46,7 +46,7 @@ const Info = () => {
                   <Image
                     style={styles.vectorIcon2}
                     resizeMode="cover"
-                    source={require("../assets/vector3.png")}
+                    source={require("../../assets/vector3.png")}
                   />
                   <View style={[styles.frameView4, styles.ml7]}>
                     <Text style={styles.phoneNumberText}>Phone Number</Text>
@@ -64,7 +64,7 @@ const Info = () => {
             <Image
               style={styles.vectorIcon3}
               resizeMode="cover"
-              source={require("../assets/vector1.png")}
+              source={require("../../assets/vector1.png")}
             />
             <Text style={[styles.dischargeInformationText, styles.ml6]}>
               Discharge Information
@@ -77,7 +77,7 @@ const Info = () => {
                   <Image
                     style={styles.vectorIcon4}
                     resizeMode="cover"
-                    source={require("../assets/vector2.png")}
+                    source={require("../../assets/vector2.png")}
                   />
                   <View style={[styles.frameView10, styles.ml7]}>
                     <Text style={styles.agentText1}>Agent</Text>
@@ -92,7 +92,7 @@ const Info = () => {
                   <Image
                     style={styles.vectorIcon5}
                     resizeMode="cover"
-                    source={require("../assets/vector3.png")}
+                    source={require("../../assets/vector3.png")}
                   />
                   <View style={[styles.frameView13, styles.ml7]}>
                     <Text style={styles.phoneNumberText1}>Phone Number</Text>
@@ -110,7 +110,7 @@ const Info = () => {
             <Image
               style={styles.vectorIcon6}
               resizeMode="cover"
-              source={require("../assets/vector1.png")}
+              source={require("../../assets/vector1.png")}
             />
             <Text style={[styles.commodityInformationText, styles.ml6]}>
               Commodity Information
@@ -121,7 +121,7 @@ const Info = () => {
               <Image
                 style={styles.vectorIcon7}
                 resizeMode="cover"
-                source={require("../assets/vector8.png")}
+                source={require("../../assets/vector8.png")}
               />
               <View style={styles.frameView19}>
                 <Text style={styles.commodityNameText}>Commodity Name</Text>
@@ -140,7 +140,7 @@ const Info = () => {
               <Image
                 style={styles.vectorIcon8}
                 resizeMode="cover"
-                source={require("../assets/vector9.png")}
+                source={require("../../assets/vector9.png")}
               />
             </View>
           </View>

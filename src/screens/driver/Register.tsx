@@ -3,12 +3,64 @@ import { Text, StyleSheet, View } from "react-native";
 import LoginLogo from "../driver/components/LoginLogo";
 import MainButton from "../driver/components/MainButton";
 import PhoneInput from "@therightfit/react-native-phone-number-input"
+import { useDispatch } from "react-redux";
+import { loginWithOtp } from '../../slices/auth';
+import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 
 const Register = () => {
+  type Nav = {
+    navigate: (value: string, {}) => void;
+  }
   const phoneInput = useRef<PhoneInput>(null);
   const [formattedValue, setFormattedValue] = useState("");
   const [value, setValue] = useState("");
-  const dis = true;
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch<any>();
+  const { navigate } = useNavigation<Nav>()
+  const [uType, setUtype] = useState('');
+  const route = useRoute();
+
+  useFocusEffect(
+    React.useCallback(() => {
+      if(route?.params){
+        setUtype(route.params.user_type);
+      }
+    }, [route?.params])
+  );
+
+  const handleSubmit = () => {
+    if(value == ''){
+      setErrorMessage("Please enter the number");
+    }else{
+      setErrorMessage("");
+
+      setIsLoading(true);
+
+      dispatch(loginWithOtp({ phone: formattedValue, user_type : uType}))
+        .unwrap()
+        .then((res: any) => {
+            console.log("res", res);
+            if (res?.data?.status == 409) {
+                setIsLoading(false);
+                setErrorMessage(res.data.message);
+            }else if (res.status == 200) {
+                setIsLoading(false);
+                setErrorMessage(res.data.message);
+                navigate('VerifyOTP', {phone : formattedValue})
+            }else{
+                setIsLoading(false);
+                setErrorMessage("Please try again");
+            }
+        })
+        .catch((error:any) => {
+            console.log("login error", error)
+            setErrorMessage(error.data.message);
+            setIsLoading(false);
+        });
+    }
+  }
+
   return (
     <View style={styles.registerView}>
       <LoginLogo />
@@ -19,7 +71,7 @@ const Register = () => {
         >{`please enter your mobile number below `}</Text>
       </View>
       <View style={[styles.frameView1, styles.mt38]}>
-      <PhoneInput
+        <PhoneInput
             ref={phoneInput}
             defaultValue={value}
             defaultCode="DM"
@@ -38,29 +90,34 @@ const Register = () => {
             withDarkTheme
             withShadow
             autoFocus
-          />       
-        <MainButton submit="Submit" />
+        />    
+        {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
+        <MainButton submit="Submit" handleSubmit={handleSubmit} isLoading={isLoading}/>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  errTxt:{
+    color: 'red',
+    marginVertical: 5
+  },
   flagButtonStyle:{
-    borderWidth:3,
-    borderColor: "orange"
+    // borderWidth:3,
+    // borderColor: "orange"
   },
   codeTextStyle:{
-    borderWidth:1,
-    borderColor: "magenta"
+    // borderWidth:1,
+    // borderColor: "magenta"
   },
   textContainerStyle: {
-    borderWidth:1,
-    borderColor: "yellow"
+    // borderWidth:1,
+    // borderColor: "yellow"
   },
   containerStyle: {
-    borderWidth:1,
-    borderColor: "green"
+    // borderWidth:1,
+    // borderColor: "green"
   },
   mt20: {
     marginTop: 20,

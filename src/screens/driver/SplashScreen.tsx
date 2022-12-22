@@ -8,17 +8,17 @@ const SplashScreen = () => {
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-85.png")}
+          source={require("../../assets/ellipse-85.png")}
         />
         <Image
           style={styles.ellipseIcon1}
           resizeMode="cover"
-          source={require("../assets/ellipse-86.png")}
+          source={require("../../assets/ellipse-86.png")}
         />
         <Image
           style={styles.lOGO13}
           resizeMode="cover"
-          source={require("../assets/logo-1-32.png")}
+          source={require("../../assets/logo-1-32.png")}
         />
         <Text style={styles.qUARKText}>QUARK</Text>
       </View>

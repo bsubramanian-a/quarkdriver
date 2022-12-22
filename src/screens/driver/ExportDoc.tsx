@@ -27,7 +27,7 @@ const ExportDoc = () => {
             <Image
               style={styles.vectorIcon}
               resizeMode="cover"
-              source={require("../assets/vector.png")}
+              source={require("../../assets/vector.png")}
             />
             <Text style={[styles.receivingExportDocuments, styles.ml6]}>
               Receiving export Documents

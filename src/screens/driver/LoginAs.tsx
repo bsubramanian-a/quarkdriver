@@ -1,12 +1,48 @@
 import React, {useState} from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, } from "react-native";
 import LoginLogo from "../driver/components/LoginLogo";
 import CheckboxLabel from "../driver/components/CheckboxLabel";
 import MainButton from "../driver/components/MainButton";
-import CheckBox from "../driver/components/CheckboxCustom";
+// import CheckBox from "../driver/components/CheckboxCustom";
+import CheckBox from '@react-native-community/checkbox';
+import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const LoginAs = () => {
-  const [userType, setUserType] = useState(false);
+  type Nav = {
+    navigate: (value: string, {}) => void;
+  }
+  
+  const { navigate } = useNavigation<Nav>()
+
+  const [userType, setUserType] = useState({
+    driver : false,
+    buyer : false,
+    receiver : false,
+    company: false
+  });
+
+  const [uType, setUtype] = useState('');
+
+  const changeUserType = (value:boolean, type:string) => {
+    setUtype(type);
+    if(type == 'driver'){
+      setUserType({...userType, driver : value, buyer : false, receiver : false, company : false})
+    }else if(type == 'buyer'){
+      setUserType({...userType, driver : false, buyer : value, receiver : false, company : false})
+    }else if(type == 'receiver'){
+      setUserType({...userType, driver : false, buyer : false, receiver : value, company : false})
+    }else if(type == 'company'){
+      setUserType({...userType, driver : false, buyer : false, receiver : false, company : value})
+    }else{
+      setUserType({...userType, driver : false, buyer : false, receiver : false, company : false})
+    }
+  }
+  
+  const onSubmit = () => {
+    navigate('Register', {user_type : uType})
+  }
+
   return (
     <View style={styles.loginAsView}>
       <LoginLogo />
@@ -15,23 +51,65 @@ const LoginAs = () => {
           Please Choose one of following options
         </Text>
         <View style={[styles.frameView, styles.mt30]}>
-          <CheckBox
+          {/* <CheckBox
             onPress={() => setUserType(!userType)}
             title="userType"
             isChecked={userType}
           />  
-          {/* <CheckboxLabel driver="Driver" />
+          <CheckboxLabel driver="Driver" />
           <CheckboxLabel driver="Buyer" />
           <CheckboxLabel driver="Reciver" />
           <CheckboxLabel driver="Transportation company" /> */}
+
+          <View style={styles.checkbox}>
+            <CheckBox
+              disabled={false}
+              value={userType.driver}
+              onValueChange={(newValue) => changeUserType(newValue, 'driver')}
+            />
+            <Text>Driver</Text>
+          </View>
+          
+          <View style={styles.checkbox}>
+            <CheckBox
+              disabled={false}
+              value={userType.buyer}
+              onValueChange={(newValue) => changeUserType(newValue, 'buyer')}
+            />
+            <Text>Buyer</Text>
+          </View>
+
+          <View style={styles.checkbox}>
+            <CheckBox
+              disabled={false}
+              value={userType.receiver}
+              onValueChange={(newValue) => changeUserType(newValue, 'receiver')}
+            />
+            <Text>Receiver</Text>
+          </View>
+
+          <View style={styles.checkbox}>
+            <CheckBox
+              disabled={false}
+              value={userType.company}
+              onValueChange={(newValue) => changeUserType(newValue, 'company')}
+            />
+            <Text>Transportation company</Text>
+          </View>
         </View>
-        <MainButton submit="Submit" />
+        <TouchableOpacity onPress={onSubmit}>
+          <MainButton submit="Submit" />
+        </TouchableOpacity>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  checkbox:{
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
   mt24: {
     marginTop: 24,
   },

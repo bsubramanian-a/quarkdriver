@@ -3,16 +3,20 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Authstack from './authstack';
 //import Mainstack from './mainstack';
 import { useSelector } from 'react-redux';
+import Mainstack from './mainstack';
 const Routes = () => {
   const Stack = createStackNavigator();
-  //const userData = useSelector((state)=> state.auth.userData)
-  //console.log("access token :",userData?.access_token);
+  const { user, access_token } = useSelector((state: any) => state.auth);
+  console.log("access token :", access_token);
+
   return (    
       <>
-        {/* {!!userData && userData?.access_token ? Mainstack(Stack)
+      {(!(access_token
+      && Object.keys(access_token).length === 0
+      && Object.getPrototypeOf(access_token) === Object.prototype)) && access_token != null
+       ? Mainstack(Stack)
                     : Authstack(Stack)
-                } */}
-        {Authstack(Stack)}
+                }
       </>
   );
 };

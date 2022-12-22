@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import {
   Image,
   StyleSheet,
@@ -6,20 +6,81 @@ import {
   ImageBackground,
   View,
   Pressable,
+  ActivityIndicator
 } from "react-native";
+import OtpInput from "./components/OtpInput";
+import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
+import { useDispatch } from "react-redux";
+import { verifyLoginOtp } from '../../slices/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const VerifyOTP = () => {
+  type Nav = {
+    navigate: (value: string) => void;
+  }
+  const route = useRoute();
+  const [otpCode, setOTPCode] = useState("");
+  const [isPinReady, setIsPinReady] = useState(false);
+  const maximumCodeLength = 4;
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const { navigate } = useNavigation<Nav>()
+  const dispatch = useDispatch<any>();
+  const [phone, setPhone] = useState('');
+
+  useFocusEffect(
+    React.useCallback(() => {
+      if(route?.params){
+        setPhone(route.params.phone);
+      }
+    }, [route?.params])
+  );
+
+  const handleSubmit = () => {
+    if(otpCode == ''){
+      setErrorMessage("Please enter the otp");
+    }else{
+      setErrorMessage("");
+
+      setIsLoading(true);
+
+      dispatch(verifyLoginOtp({ phone: phone, otp : otpCode}))
+        .unwrap()
+        .then(async(res: any) => {
+            console.log("res", res);
+            if (res?.status == 409) {
+                setIsLoading(false);
+                setErrorMessage(res.message);
+            }else if (res.status == 200) {
+                setIsLoading(false);
+                setErrorMessage(res.message);
+                const user = JSON.parse(await AsyncStorage.getItem('user') || "{}");
+                console.log("res user", user);
+                navigate('Home')
+            }else{
+                setIsLoading(false);
+                setErrorMessage("Please try again");
+            }
+        })
+        .catch((error:any) => {
+            console.log("login error", error)
+            setErrorMessage(error.message);
+            setIsLoading(false);
+        });
+    }
+  }
+
   return (
     <View style={styles.verifyOTPView}>
       <ImageBackground
         style={styles.frameIcon}
         resizeMode="stretch"
-        source={require("../assets/frame481.png")}
+        source={require("../../assets/frame481.png")}
       >
         <Image
           style={styles.lOGO13}
           resizeMode="cover"
-          source={require("../assets/logo-1-31.png")}
+          source={require("../../assets/logo-1-31.png")}
         />
         <Text style={[styles.qUARKText, styles.mt_7]}>QUARK</Text>
       </ImageBackground>
@@ -29,16 +90,21 @@ const VerifyOTP = () => {
           Please Enter your OTP Number
         </Text>
       </View>
+
+      <OtpInput code={otpCode}
+       setCode={setOTPCode}
+       maximumLength={maximumCodeLength}
+       setIsPinReady={setIsPinReady}/>
+      {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
       <View style={[styles.frameView3, styles.mt38]}>
-        <View style={styles.frameView1}>
-          <Text style={styles.text}>879-7585-256</Text>
-          <Text style={styles.text1}>{` `}</Text>
-        </View>
         <View style={[styles.frameView2, styles.mt68]}>
           <Text style={styles.resendOTPCode}>Resend OTP Code</Text>
-          <Pressable style={[styles.framePressable, styles.mt29]}>
-            <Text style={styles.submitText}>Submit</Text>
-          </Pressable>
+          {
+            otpCode?.length == maximumCodeLength && <Pressable onPress={handleSubmit} style={[styles.framePressable, styles.mt29]}>
+              {!isLoading ? <Text style={styles.submitText}>Submit</Text> : <ActivityIndicator size="small" color="#0000ff" />}
+            </Pressable>
+          }
+          
         </View>
       </View>
     </View>
@@ -46,6 +112,10 @@ const VerifyOTP = () => {
 };
 
 const styles = StyleSheet.create({
+  errTxt:{
+    color: 'red',
+    marginVertical: 5
+  },
   mt_7: {
     marginTop: -7,
   },
