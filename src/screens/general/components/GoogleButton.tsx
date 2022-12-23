@@ -3,7 +3,7 @@ import { Pressable, Image, StyleSheet, Text } from "react-native";
 
 const GoogleButton = () => {
   return (
-    <Pressable style={[styles.googleButton, styles.mt28]}>
+    <Pressable style={styles.googleButton}>
       <Image
         style={styles.carbonlogoGoogleIcon}
         resizeMode="cover"
