@@ -6,6 +6,7 @@ import {
   Text,
   ImageBackground,
   View,
+  Pressable,
 } from "react-native";
 import TInput from "./components/TInput";
 import PInput from "./components/PInput";
@@ -13,8 +14,9 @@ import MainButton from "./components/MainButton";
 import { Formik } from 'formik'
 import * as yup from 'yup'
 import { useDispatch } from "react-redux";
-import { login } from '../../slices/auth';
+import { login, register } from '../../slices/auth';
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
+import CheckBox from '@react-native-community/checkbox';
 
 const Signup = () => {
   type Nav = {
@@ -46,18 +48,17 @@ const Signup = () => {
       .string()
       .min(6, ({ min }) => `Password must be at least ${min} characters`)
       .required('Password is required'),
-    confirm: yup
-      .string()
-      .min(6, ({ min }) => `Password must be at least ${min} characters`)
-      .required('Password is required'),
+    confirm: yup.string()
+      .oneOf([yup.ref('password'), null], 'Passwords must match'),
+    agree: yup.boolean().oneOf([true],'Please read and agree to terms and conditions!')
   })
 
-  const onSubmit = (values:any) => {
+  const onSubmit = (values:any, resetForm:any) => {
     console.log("form values", values);
     setErrorMessage("");
     setIsLoading(true);
 
-    dispatch(login({ email: values.email, password : values.password}))
+    dispatch(register({ email: values.email, password : values.password}))
       .unwrap()
       .then((res: any) => {
           console.log("res", res);
@@ -67,6 +68,7 @@ const Signup = () => {
           }else if (res.status == 200) {
               setIsLoading(false);
               setErrorMessage(res.message);
+              resetForm({values: ""});
               // navigate('Home')
           }else{
               setIsLoading(false);
@@ -100,9 +102,9 @@ const Signup = () => {
       </ImageBackground>
       <Formik
         validationSchema={loginValidationSchema}
-        initialValues={{ email: '', password: '', confirm: '' }}
-        onSubmit={values => onSubmit(values)}>
-      {({ handleChange, handleBlur, handleSubmit, values, errors, isValid }) => (
+        initialValues={{ email: '', password: '', confirm: '', agree: false }}
+        onSubmit={(values,resetForm) => onSubmit(values, {resetForm})}>
+      {({ handleChange, handleBlur, handleSubmit, values, errors, isValid, setFieldValue, resetForm }) => (
       <View style={[styles.content, styles.mt12]}>
         <View style={styles.head}>
           <Text style={styles.signUp}>Sign up</Text>
@@ -113,6 +115,7 @@ const Signup = () => {
             </Text>
           </View>
         </View>
+        {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
         <View style={[styles.form, styles.mt12]}>
           <View style={styles.formInput}>
             <View style={styles.email}>
@@ -136,29 +139,39 @@ const Signup = () => {
             <View style={[styles.password2, styles.mt13]}>
               <Text style={styles.reEnterPassword}>Re enter password</Text>
               <PInput frame458Placeholder="re-enter password" name="confirm" onChangeText={handleChange} onBlur={handleBlur}  />
-              <Text>dsfv</Text>
+
               {errors.confirm &&
                 <Text style={{ fontSize: 10, color: 'red' }}>{errors.confirm}</Text>
               }
             </View>
           </View>
-          <View style={[styles.termsConditions, styles.mt8]}>
-            <View style={styles.rectangleView} />
+          <View style={styles.checkbox}>
+            <CheckBox
+              disabled={false}
+              value={values.agree}
+              onValueChange={(newValue) => setFieldValue('agree', newValue)}
+            />
             <Text style={[styles.iAgreeWithTermsAndPrivacy, styles.ml6]}>
               <Text style={styles.iAgreeWith}>{`I Agree with `}</Text>
               <Text style={styles.terms}>Terms</Text>
               <Text style={styles.and}>{` and `}</Text>
               <Text style={styles.privacy}>Privacy</Text>
             </Text>
-          </View>
         </View>
+        {errors.agree &&
+          <Text style={{ fontSize: 10, color: 'red' }}>{errors.agree}</Text>
+        }
+        </View>
+        
         <View style={[styles.linkButton, styles.mt12]}>
-          <MainButton />
+          <MainButton submit="Sign up" handleSubmit={handleSubmit} isLoading={isLoading}/>
           <View style={[styles.signupLink, styles.mt22]}>
             <Text style={styles.alreadyHaveAnAccount}>
               Already Have An Account?
             </Text>
-            <Text style={[styles.signIn, styles.mt11]}>Sign In</Text>
+            <Pressable onPress={() => navigate('SignIn')}>
+              <Text style={[styles.signIn, styles.mt11]}>Sign In</Text>
+            </Pressable>
           </View>
         </View>
       </View>
@@ -169,6 +182,10 @@ const Signup = () => {
 };
 
 const styles = StyleSheet.create({
+  errTxt:{
+    color: 'red',
+    marginVertical: 5
+  },
   mt_7: {
     marginTop: -7,
   },
@@ -359,6 +376,10 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     color: "#0a288f",
     textAlign: "left",
+  },
+  checkbox:{
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   signIn: {
     position: "relative",

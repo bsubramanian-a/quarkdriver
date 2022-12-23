@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import {
   ScrollView,
   Image,
@@ -6,11 +6,63 @@ import {
   Text,
   ImageBackground,
   View,
+  ActivityIndicator
 } from "react-native";
 import TInput from "./components/TInput";
 import MainButton from "./components/MainButton";
+import { Formik } from 'formik'
+import * as yup from 'yup'
+import { useDispatch } from "react-redux";
+import { forget } from '../../slices/auth';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 const ResetPassword = () => {
+  type Nav = {
+    navigate: (value: string) => void;
+  }
+
+  const [formattedValue, setFormattedValue] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch<any>();
+  const { navigate } = useNavigation<Nav>()
+  const [uType, setUtype] = useState('');
+  const route = useRoute();
+
+  const loginValidationSchema = yup.object().shape({
+    email: yup
+      .string()
+      .email("Please enter valid email")
+      .required('Email Address is Required')
+  })
+
+  const onSubmit = (values:any) => {
+    console.log("form values", values);
+    setErrorMessage("");
+    setIsLoading(true);
+
+    dispatch(forget({ email: values.email}))
+      .unwrap()
+      .then((res: any) => {
+          console.log("res", res);
+          if (res?.status == 409) {
+              setIsLoading(false);
+              setErrorMessage(res.status);
+          }else if (res.status == 'success') {
+              setIsLoading(false);
+              setErrorMessage('Email has been sent to you to reset');
+          }else{
+              setIsLoading(false);
+              setErrorMessage(res.status);
+          }
+      })
+      .catch((error:any) => {
+          console.log("login error", error)
+          setErrorMessage(error.data.status);
+          setIsLoading(false);
+      });
+  }
+
   return (
     <ScrollView
       style={styles.resetPassword1}
@@ -33,20 +85,34 @@ const ResetPassword = () => {
         <Text style={[styles.pleaseEnterYourEmailAddres, styles.mt20]}>
           please enter your email address associated with your account
         </Text>
+        {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
       </View>
-      <View style={[styles.frameView1, styles.mt30]}>
-        <TInput
-          frame458Color="#0A288F"
-          frame458JustifyContent="center"
-          frame458MarginTop="unset"
-        />
-        <MainButton frame466MarginTop={82} submit="Verify email" />
-      </View>
+     
+      <Formik
+        validationSchema={loginValidationSchema}
+        initialValues={{ email: '' }}
+        onSubmit={values => onSubmit(values)}>
+          {({ handleChange, handleBlur, handleSubmit, values, errors, isValid }) => (
+            <View style={[styles.frameView1, styles.mt30]}>
+              <TInput
+                frame458Color="#0A288F"
+                frame458JustifyContent="center"
+                frame458MarginTop="unset"
+                name="email" onChangeText={handleChange} onBlur={handleBlur}
+              />
+              <MainButton frame466MarginTop={82} submit="Verify email" isLoading={isLoading} handleSubmit={handleSubmit}/>
+            </View>
+        )}
+      </Formik>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  errTxt:{
+    color: 'red',
+    marginVertical: 5
+  },
   mt_7: {
     marginTop: -7,
   },
@@ -130,7 +196,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
-    overflow: "hidden",
+    // overflow: "hidden",
     maxWidth: "100%",
   },
 });

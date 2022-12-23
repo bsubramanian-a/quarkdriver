@@ -4,10 +4,11 @@ import Routes from './src/navigations/routes';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDispatch } from "react-redux";
 import { saveUserData } from './src/slices/auth';
+import { LogBox } from 'react-native';
 
 const App = () => {
   const dispatch = useDispatch<any>();
-
+  LogBox.ignoreAllLogs();
   useEffect(() => {
     (async()=>{
       const user = JSON.parse(await AsyncStorage.getItem('user') || "{}");

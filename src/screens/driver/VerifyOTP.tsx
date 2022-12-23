@@ -12,7 +12,7 @@ import {
 import OtpInput from "./components/OtpInput";
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
 import { useDispatch } from "react-redux";
-import { verifyLoginOtp } from '../../slices/auth';
+import { verifyLoginOtp, resendLoginOtp } from '../../slices/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const VerifyOTP = () => {
@@ -71,8 +71,43 @@ const VerifyOTP = () => {
     }
   }
 
+  const resendOtp = () => {
+    setErrorMessage("");
+
+    setIsLoading(true);
+
+    dispatch(resendLoginOtp({ phone: phone}))
+      .unwrap()
+      .then(async(res: any) => {
+          console.log("res resend", res);
+          if (res?.status == 409) {
+              setIsLoading(false);
+              setErrorMessage(res.message);
+          }else if (res.status == 200) {
+              setIsLoading(false);
+              setErrorMessage(res.message);
+              // const user = JSON.parse(await AsyncStorage.getItem('user') || "{}");
+              // console.log("res user", user);
+              navigate('Home')
+          }else{
+              setIsLoading(false);
+              setErrorMessage("Please try again");
+          }
+      })
+      .catch((error:any) => {
+          console.log("login error", error)
+          setErrorMessage(error.message);
+          setIsLoading(false);
+      });
+  }
+
   return (
     <View style={styles.verifyOTPView}>
+      {isLoading && 
+        <View style={styles.loading}>
+          <ActivityIndicator size="large" color="#0000ff" />
+        </View>
+      }
       <LoginLogo />
       <View style={[styles.frameView, styles.mt38]}>
         <Text style={styles.welcomeToQuark}>Welcome to Quark</Text>
@@ -88,7 +123,10 @@ const VerifyOTP = () => {
       {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
       <View style={[styles.frameView3, styles.mt38]}>
         <View style={[styles.frameView2, styles.mt68]}>
-          <Text style={styles.resendOTPCode}>Resend OTP Code</Text>
+          <Pressable onPress={resendOtp}>
+            <Text style={styles.resendOTPCode}>Resend OTP Code</Text>
+          </Pressable>
+          
           {
             otpCode?.length == maximumCodeLength && <Pressable onPress={handleSubmit} style={[styles.framePressable, styles.mt29]}>
               {!isLoading ? <Text style={styles.submitText}>Submit</Text> : <ActivityIndicator size="small" color="#0000ff" />}
@@ -102,6 +140,16 @@ const VerifyOTP = () => {
 };
 
 const styles = StyleSheet.create({
+  loading:{
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 100000,
+  },
   errTxt:{
     color: 'red',
     marginVertical: 5

@@ -125,7 +125,10 @@ const SignIn = () => {
                 </View>
               </View>
               <View style={[styles.buttonLink, styles.mt27]}>
-                <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
+                <Pressable onPress={() => navigate('ResetPassword')}>
+                  <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
+                </Pressable>
+            
                 <View style={[styles.linkButton, styles.mt19]}>
                   <MainButton
                     frame466MarginTop="unset"

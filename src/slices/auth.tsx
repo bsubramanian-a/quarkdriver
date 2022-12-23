@@ -52,6 +52,20 @@ export const verifyLoginOtp = createAsyncThunk(
   }
 );
 
+export const resendLoginOtp = createAsyncThunk(
+  "auth/resend-login-otp",
+  async ({ phone }:any, thunkAPI) => {
+    try {
+      const response = await AuthService.resendLoginOtp(phone);
+      console.log("login res auth", response);
+      return response;
+    } catch (error:any) {
+      console.log("error", error)
+      return thunkAPI.rejectWithValue(error.response); 
+    }
+  }
+);
+
 export const login = createAsyncThunk(
   "auth/login",
   async ({ email, password }:any, thunkAPI) => {
@@ -86,7 +100,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 
 export const forget = createAsyncThunk(
   "auth/forget",
-  async (email:string, thunkAPI) => {
+  async ({email}:any, thunkAPI) => {
     try {
       const response = await AuthService.forget(email);
       return response.data;

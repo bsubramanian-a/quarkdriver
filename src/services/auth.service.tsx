@@ -11,11 +11,12 @@ const register = (email:string, password:string, firstname:string, lastname:stri
   });
 };
 
-const forget = (email:string) => {
+const forget = (email:any) => {
+  console.log("email", email);
   return axios.post(API_URL + "forget-password", {
     email
   }).then((response) => {
-    return response.data;
+    return response;
   });;
 };
 
@@ -80,6 +81,17 @@ const verifyLoginOtp = (phone:string, otp:string) => {
     });
 };
 
+const resendLoginOtp = (phone:string) => {
+  return axios
+    .post(API_URL + "resend-login-otp", {
+      phone
+    })
+    .then(async(response) => {
+      console.log("resend service", response);
+      return response.data;
+    });
+};
+
 const otp = (email:string, otp:number) => {
   console.log("sending otp",otp);
   return axios.post(API_URL + "user-otp", {
@@ -126,7 +138,8 @@ const authService = {
   // changepassword,
   verifyEmail,
   loginWithOtp,
-  verifyLoginOtp
+  verifyLoginOtp,
+  resendLoginOtp
 };
 
 export default authService;

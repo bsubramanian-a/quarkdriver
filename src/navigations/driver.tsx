@@ -4,7 +4,7 @@ import Home from '../screens/driver/Home';
 import SplashScreen from '../screens/general/SplashScreen';
 
 // create a component
-const Mainstack = (Stack:any) => {
+const Driver = (Stack:any) => {
     return (
         <Stack.Navigator screenOptions={{
             headerShown: false
@@ -16,4 +16,4 @@ const Mainstack = (Stack:any) => {
 };
 
 //make this component available to the app
-export default Mainstack;
+export default Driver;

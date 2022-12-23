@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 10
   },
 });
 
