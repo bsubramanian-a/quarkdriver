@@ -11,10 +11,10 @@ export const saveUserData = createAsyncThunk(
 
 export const register = createAsyncThunk(
   "auth/register",
-  async ({email, password, firstname, lastname}:any, thunkAPI) => {
-    console.log("auth register", email, password, firstname, lastname)
+  async ({email, password, type}:any, thunkAPI) => {
+    console.log("register auth type", type);
     try {
-      const response = await AuthService.register(email, password, firstname, lastname);
+      const response = await AuthService.register(email, password, type);
       return response.data;
     } catch (error:any) {
       return thunkAPI.rejectWithValue(error.response); 
@@ -43,6 +43,20 @@ export const verifyLoginOtp = createAsyncThunk(
     console.log("loginWithOtpslice")
     try {
       const response = await AuthService.verifyLoginOtp(phone, otp);
+      console.log("login res auth", response);
+      return response;
+    } catch (error:any) {
+      console.log("error", error)
+      return thunkAPI.rejectWithValue(error.response); 
+    }
+  }
+);
+
+export const resendLoginOtp = createAsyncThunk(
+  "auth/resend-login-otp",
+  async ({ phone }:any, thunkAPI) => {
+    try {
+      const response = await AuthService.resendLoginOtp(phone);
       console.log("login res auth", response);
       return response;
     } catch (error:any) {
@@ -86,7 +100,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 
 export const forget = createAsyncThunk(
   "auth/forget",
-  async (email:string, thunkAPI) => {
+  async ({email}:any, thunkAPI) => {
     try {
       const response = await AuthService.forget(email);
       return response.data;

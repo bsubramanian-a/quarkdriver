@@ -15,7 +15,7 @@ const NoNotification = () => {
           <Image
             style={styles.noNotificationIcon}
             resizeMode="cover"
-            source={require("../assets/nonotification.png")}
+            source={require("../../assets/nonotification.png")}
           />
           <Text style={[styles.canNotFindNotificationNow, styles.mt14]}>
             can not find notification now
@@ -26,22 +26,22 @@ const NoNotification = () => {
         <Image
           style={styles.vectorIcon}
           resizeMode="cover"
-          source={require("../assets/vector.png")}
+          source={require("../../assets/vector.png")}
         />
         <Image
           style={styles.vectorIcon1}
           resizeMode="cover"
-          source={require("../assets/vector37.png")}
+          source={require("../../assets/vector37.png")}
         />
         <Image
           style={styles.vectorIcon2}
           resizeMode="cover"
-          source={require("../assets/vector2.png")}
+          source={require("../../assets/vector2.png")}
         />
         <Image
           style={styles.vectorIcon3}
           resizeMode="cover"
-          source={require("../assets/vector39.png")}
+          source={require("../../assets/vector39.png")}
         />
       </View>
     </View>

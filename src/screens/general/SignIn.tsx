@@ -20,7 +20,7 @@ import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/nativ
 
 const SignIn = () => {
   type Nav = {
-    navigate: (value: string) => void;
+    navigate: (value: string, {}) => void;
   }
 
   const [formattedValue, setFormattedValue] = useState("");
@@ -79,7 +79,7 @@ const SignIn = () => {
   }
 
   const navigateToPage = (page: string) => {
-    navigate(page);
+    navigate(page, {type: uType});
   }
 
   return (
@@ -123,36 +123,34 @@ const SignIn = () => {
                   <Text style={{ fontSize: 10, color: 'red' }}>{errors.password}</Text>
                 }
               </View>
-            </View>
-            <View style={[styles.buttonLink, styles.mt27]}>
-              <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
-              <View style={[styles.linkButton, styles.mt19]}>
-                <MainButton
-                  frame466MarginTop="unset"
-                  frame466Height={51}
-                  frame466FlexShrink={0}
-                  submit="Sign in"
-                  handleSubmit={handleSubmit}
-                  isLoading={isLoading}
-                />
-                <View style={[styles.divider, styles.mt28]}>
-                  <View style={styles.line_view1}></View>
-                  <Text style={styles.or}>Or</Text>
-                  <View style={styles.line_view1}></View>
-                </View>
-                {/* <View style={[styles.divider, styles.mt28]}>
-                  <View style={styles.vectorIcon}></View>
-                  <Text style={[styles.or, styles.ml6]}>Or</Text>
-                  <View style={styles.vectorIcon}></View>
-                </View> */}
-                <GoogleButton />
-                <View style={[styles.signupLink, styles.mt28]}>
-                  <Text style={styles.donotHaveAnAccount}>
-                    Donot have an account?
-                  </Text>
-                  <Pressable onPress={() => navigateToPage('Signup')}>
-                    <Text style={[styles.signUp, styles.mt11]}>Sign Up</Text>
-                  </Pressable>
+              <View style={[styles.buttonLink, styles.mt27]}>
+                <Pressable onPress={() => navigate('ResetPassword')}>
+                  <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
+                </Pressable>
+            
+                <View style={[styles.linkButton, styles.mt19]}>
+                  <MainButton
+                    frame466MarginTop="unset"
+                    frame466Height={51}
+                    frame466FlexShrink={0}
+                    submit="Sign in"
+                    handleSubmit={handleSubmit}
+                    isLoading={isLoading}
+                  />
+                  <View style={[styles.divider, styles.mt28]}>
+                    <View style={styles.line_view1}></View>
+                    <Text style={styles.or}>Or</Text>
+                    <View style={styles.line_view1}></View>
+                  </View>
+                  <GoogleButton />
+                  <View style={[styles.signupLink, styles.mt28]}>
+                    <Text style={styles.donotHaveAnAccount}>
+                      Donot have an account?
+                    </Text>
+                    <Pressable onPress={() => navigateToPage('Signup')}>
+                      <Text style={[styles.signUp, styles.mt11]}>Sign Up</Text>
+                    </Pressable>
+                  </View>
                 </View>
               </View>
             </View>

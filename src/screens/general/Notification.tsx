@@ -2,7 +2,7 @@ import * as React from "react";
 import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
 import HeaderNotification from "./components/HeaderNotification";
 
-const Notification1 = () => {
+const Notification = () => {
   return (
     <View style={styles.notification}>
       <HeaderNotification />
@@ -343,4 +343,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Notification1;
+export default Notification;

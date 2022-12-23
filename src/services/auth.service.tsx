@@ -5,17 +5,19 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const API_URL = "http://192.168.18.134:8000/api/v1/users/";
 // const API_URL = "https://quark-api-141h.onrender.com/api/v1/users/";
 
-const register = (email:string, password:string, firstname:string, lastname:string) => {
+const register = (email:string, password:string, type:string) => {
+  console.log("register service type", type);
   return axios.post(API_URL + "create-user", {
-    email, password, firstname, lastname
+    email, password, type
   });
 };
 
-const forget = (email:string) => {
+const forget = (email:any) => {
+  console.log("email", email);
   return axios.post(API_URL + "forget-password", {
     email
   }).then((response) => {
-    return response.data;
+    return response;
   });;
 };
 
@@ -80,6 +82,17 @@ const verifyLoginOtp = (phone:string, otp:string) => {
     });
 };
 
+const resendLoginOtp = (phone:string) => {
+  return axios
+    .post(API_URL + "resend-login-otp", {
+      phone
+    })
+    .then(async(response) => {
+      console.log("resend service", response);
+      return response.data;
+    });
+};
+
 const otp = (email:string, otp:number) => {
   console.log("sending otp",otp);
   return axios.post(API_URL + "user-otp", {
@@ -126,7 +139,8 @@ const authService = {
   // changepassword,
   verifyEmail,
   loginWithOtp,
-  verifyLoginOtp
+  verifyLoginOtp,
+  resendLoginOtp
 };
 
 export default authService;
