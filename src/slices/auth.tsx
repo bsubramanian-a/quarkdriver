@@ -11,10 +11,10 @@ export const saveUserData = createAsyncThunk(
 
 export const register = createAsyncThunk(
   "auth/register",
-  async ({email, password, firstname, lastname}:any, thunkAPI) => {
-    console.log("auth register", email, password, firstname, lastname)
+  async ({email, password, type}:any, thunkAPI) => {
+    console.log("register auth type", type);
     try {
-      const response = await AuthService.register(email, password, firstname, lastname);
+      const response = await AuthService.register(email, password, type);
       return response.data;
     } catch (error:any) {
       return thunkAPI.rejectWithValue(error.response); 

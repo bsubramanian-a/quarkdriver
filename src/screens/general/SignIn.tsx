@@ -20,7 +20,7 @@ import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/nativ
 
 const SignIn = () => {
   type Nav = {
-    navigate: (value: string) => void;
+    navigate: (value: string, {}) => void;
   }
 
   const [formattedValue, setFormattedValue] = useState("");
@@ -79,7 +79,7 @@ const SignIn = () => {
   }
 
   const navigateToPage = (page: string) => {
-    navigate(page);
+    navigate(page, {type: uType});
   }
 
   return (

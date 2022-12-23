@@ -58,7 +58,7 @@ const Signup = () => {
     setErrorMessage("");
     setIsLoading(true);
 
-    dispatch(register({ email: values.email, password : values.password}))
+    dispatch(register({ email: values.email, password : values.password, type: uType}))
       .unwrap()
       .then((res: any) => {
           console.log("res", res);

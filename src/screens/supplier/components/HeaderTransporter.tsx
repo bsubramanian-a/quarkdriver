@@ -14,7 +14,7 @@ const HeaderTransporter = () => {
         <Image
           style={styles.profilePicIcon}
           resizeMode="cover"
-          source={require("../assets/profilepic.png")}
+          source={require("../../../assets/profilepic.png")}
         />
       </View>
       <View style={[styles.inputView, styles.mt25]}>
@@ -27,7 +27,7 @@ const HeaderTransporter = () => {
         <Image
           style={[styles.logisticIcon, styles.ml17]}
           resizeMode="cover"
-          source={require("../assets/logistic-icon.png")}
+          source={require("../../../assets/logistic-icon.png")}
         />
       </View>
     </View>

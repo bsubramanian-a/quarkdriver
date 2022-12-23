@@ -5,9 +5,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const API_URL = "http://192.168.18.134:8000/api/v1/users/";
 // const API_URL = "https://quark-api-141h.onrender.com/api/v1/users/";
 
-const register = (email:string, password:string, firstname:string, lastname:string) => {
+const register = (email:string, password:string, type:string) => {
+  console.log("register service type", type);
   return axios.post(API_URL + "create-user", {
-    email, password, firstname, lastname
+    email, password, type
   });
 };
 
