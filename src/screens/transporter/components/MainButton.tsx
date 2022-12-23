@@ -36,7 +36,7 @@ const MainButton = ({
 
   return (
     <Pressable onPress={handleSubmit} disabled={isLoading}
-      style={[styles.framePressable, styles.mt30, framePressableStyle]}
+      style={[styles.framePressable, framePressableStyle]}
     >
       {!isLoading ? <Text style={styles.submit}>{submit}</Text> : <ActivityIndicator size="small" color="#0000ff" />}
     </Pressable>

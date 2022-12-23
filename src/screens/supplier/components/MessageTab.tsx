@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, Text } from "react-native";
 
 const MessageTab = () => {
   return (
-    <View style={[styles.detailView, styles.mt90]}>
+    <View style={styles.detailView}>
       <View style={styles.lineView} />
       <View style={[styles.chat, styles.mt15]}>
         <View style={styles.details}>
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   hiJaniCould: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   uploadBjack: {
     margin: 0,
@@ -202,8 +202,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   hiPatrick: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   asSoonAs: {
     margin: 0,

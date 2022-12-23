@@ -6,7 +6,7 @@ import {
   View,
   ImageBackground,
 } from "react-native";
-import HeaderInside from "./components/HeaderInside";
+import HeaderInside from "../general/components/HeaderInside";
 import Menu from "./components/Menu";
 import TrucksTab from "./components/TrucksTab";
 

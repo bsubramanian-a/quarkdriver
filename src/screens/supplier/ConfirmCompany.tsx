@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from "react-native";
 import HeaderNotification from "./components/HeaderNotification";
 import CompanyInfo from "./components/CompanyInfo";
 import NotCompletedBtn from "./components/NotCompletedBtn";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const ConfirmCompany = () => {
   return (

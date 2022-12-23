@@ -19,9 +19,9 @@ type TInputType = {
   frame458FontFamily?: string;
   frame458Flex?: number;
   frame458BackgroundColor?: string;
-  onChangeText:any;
-  onBlur:any;
-  name:string;
+  onChangeText?:any;
+  onBlur?:any;
+  name?:string;
 };
 
 const getStyleValue = (key: string, value: string | number | undefined) => {
@@ -87,7 +87,7 @@ const TInput = ({
 
   return (
     <TextInput
-      style={[styles.frameTextInput, styles.mt4, frameTextInputStyle]}
+      style={[styles.frameTextInput, frameTextInputStyle]}
       placeholder="sample@email.com "
       keyboardType="email-address"
       placeholderTextColor="#b6bfdd"

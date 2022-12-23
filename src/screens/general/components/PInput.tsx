@@ -4,7 +4,7 @@ import { TextInput, StyleSheet } from "react-native";
 const PInput = ({onChangeText, onBlur, name}:any) => {
   return (
     <TextInput
-      style={[styles.frameTextInput, styles.mt4]}
+      style={styles.frameTextInput}
       placeholder="enter password"
       keyboardType="default"
       placeholderTextColor="#b6bfdd"

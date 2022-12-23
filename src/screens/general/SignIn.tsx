@@ -29,12 +29,12 @@ const SignIn = () => {
   const dispatch = useDispatch<any>();
   const { navigate } = useNavigation<Nav>()
   const [uType, setUtype] = useState('');
-  const route = useRoute();
+  const route:any = useRoute();
 
   useFocusEffect(
     React.useCallback(() => {
       if (route?.params) {
-        setUtype(route.params.user_type);
+        setUtype(route?.params.user_type);
       }
     }, [route?.params])
   );
@@ -124,7 +124,7 @@ const SignIn = () => {
                 }
               </View>
               <View style={[styles.buttonLink, styles.mt27]}>
-                <Pressable onPress={() => navigate('ResetPassword')}>
+                <Pressable onPress={() => navigate('ResetPassword',{})}>
                   <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
                 </Pressable>
             

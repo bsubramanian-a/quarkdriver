@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, Text } from "react-native";
 
 const DepartureTab = () => {
   return (
-    <View style={[styles.detailView, styles.mt90]}>
+    <View style={styles.detailView}>
       <View style={styles.lineView} />
       <View style={[styles.details, styles.mt15]}>
         <View style={styles.companyDetails}>
@@ -228,12 +228,12 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   turkishMarco: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   companyIstanbul: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
+    marginStart: 0,
+    marginEnd: 0,
   },
   turkey: {
     margin: 0,

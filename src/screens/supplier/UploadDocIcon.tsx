@@ -9,7 +9,7 @@ import {
 import HeaderInside from "./components/HeaderInside";
 import SupplierMenu from "./components/SupplierMenu";
 import UploadTab from "./components/UploadTab";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const UploadDocIcon = () => {
   return (

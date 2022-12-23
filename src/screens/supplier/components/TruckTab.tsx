@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, Text, ImageBackground } from "react-native";
 
 const TruckTab = () => {
   return (
-    <View style={[styles.detailView, styles.mt90]}>
+    <View style={styles.detailView}>
       <View style={styles.lineView} />
       <View style={[styles.details, styles.mt15]}>
         <View style={styles.companyDetails}>

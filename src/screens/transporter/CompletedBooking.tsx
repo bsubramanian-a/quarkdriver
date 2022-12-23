@@ -1,9 +1,9 @@
 import * as React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import HeaderTransporter from "./components/HeaderTransporter";
+import HeaderTransporter from "../general/components/HeaderTransporter";
 import TabMain from "./components/TabMain";
 import CompletedTab from "./components/CompletedTab";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const CompletedBooking = () => {
   return (

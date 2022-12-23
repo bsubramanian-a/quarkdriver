@@ -6,10 +6,10 @@ import {
   View,
   ImageBackground,
 } from "react-native";
-import HeaderInside from "./components/HeaderInside";
+import HeaderInside from "../general/components/HeaderInside";
 import Menu from "./components/Menu";
 import LoadingTab from "./components/LoadingTab";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const LoadingInfoIcon = () => {
   return (
@@ -50,7 +50,7 @@ const LoadingInfoIcon = () => {
       </View>
       <BottomMenu
         vector={require("../assets/vector1.png")}
-        tBottomMenuMarginTop={-30}
+        cBottomMenuMarginTop={-30}
         vector1={require("../assets/vector2.png")}
       />
     </ImageBackground>

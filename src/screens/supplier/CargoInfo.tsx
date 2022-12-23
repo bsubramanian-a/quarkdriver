@@ -4,7 +4,7 @@ import HeaderNotification from "./components/HeaderNotification";
 import CompanyInfo from "./components/CompanyInfo";
 import CompletedBtn from "./components/CompletedBtn";
 import NotCompletedBtn from "./components/NotCompletedBtn";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const CargoInfo = () => {
   return (

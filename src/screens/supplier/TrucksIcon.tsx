@@ -9,7 +9,7 @@ import {
 import HeaderInside from "./components/HeaderInside";
 import SupplierMenu from "./components/SupplierMenu";
 import TruckTab from "./components/TruckTab";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const TrucksIcon = () => {
   return (

@@ -2,7 +2,7 @@ import * as React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import HeaderNotification from "./components/HeaderNotification";
 import CompletedInfo from "./components/CompletedInfo";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const CompletedBooking = () => {
   return (
@@ -25,10 +25,10 @@ const CompletedBooking = () => {
         </View>
       </ScrollView>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
-        vector1={require("../assets/vector2.png")}
-        vector2={require("../assets/vector.png")}
-        vector3={require("../assets/vector3.png")}
+        vector={require("../../assets/vector1.png")}
+        vector1={require("../../assets/vector2.png")}
+        vector2={require("../../assets/vector.png")}
+        vector3={require("../../assets/vector3.png")}
       />
     </View>
   );

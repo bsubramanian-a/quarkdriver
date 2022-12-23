@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 const Progress = () => {
   return (
-    <View style={[styles.progress, styles.mt12]}>
+    <View style={styles.progress}>
       <View style={styles.frameView3}>
         <View style={styles.frameView1}>
           <Image

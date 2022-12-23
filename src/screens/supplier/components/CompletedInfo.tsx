@@ -20,7 +20,7 @@ const CompletedInfo = ({ frame606MarginTop }: CompletedInfoType) => {
   }, [frame606MarginTop]);
 
   return (
-    <View style={[styles.frameView9, styles.mt14, frameView1Style]}>
+    <View style={[styles.frameView9, frameView1Style]}>
       <View style={styles.details}>
         <Image
           style={styles.packageIcon}

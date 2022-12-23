@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import HeaderInside from "./components/HeaderInside";
 import BookingTab from "./components/BookingTab";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const BookingIcon = () => {
   return (

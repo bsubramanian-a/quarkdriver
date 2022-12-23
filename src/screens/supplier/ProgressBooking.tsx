@@ -2,7 +2,7 @@ import * as React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import HeaderNotification from "./components/HeaderNotification";
 import ProgressInfo from "./components/ProgressInfo";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const ProgressBooking = () => {
   return (

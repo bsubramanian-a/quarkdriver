@@ -34,7 +34,7 @@ const NotCompletedBtn = ({
 
   return (
     <Pressable
-      style={[styles.framePressable, styles.mt14, framePressable2Style]}
+      style={[styles.framePressable, framePressable2Style]}
     >
       <Text style={[styles.text, text1Style]}>{component}</Text>
     </Pressable>

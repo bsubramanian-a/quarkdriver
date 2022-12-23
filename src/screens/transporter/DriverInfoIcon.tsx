@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import Menu from "./components/Menu";
 import DriverInfo from "./components/DriverInfo";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const DriverInfoIcon = () => {
   return (

@@ -4,7 +4,7 @@ import HeaderNotification from "./components/HeaderNotification";
 import TInput from "./components/TInput";
 import TextAInput from "./components/TextAInput";
 import SubmitBtn from "./components/SubmitBtn";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const AddLoading = () => {
   return (

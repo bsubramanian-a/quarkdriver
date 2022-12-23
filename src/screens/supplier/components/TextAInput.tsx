@@ -4,7 +4,7 @@ import { TextInput, StyleSheet } from "react-native";
 const TextAInput = () => {
   return (
     <TextInput
-      style={[styles.frameTextInput, styles.mt4]}
+      style={styles.frameTextInput}
       placeholder="Full Address of Shipper"
       keyboardType="default"
       placeholderTextColor="#b6bfdd"

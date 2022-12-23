@@ -6,10 +6,10 @@ import {
   View,
   ImageBackground,
 } from "react-native";
-import HeaderInside from "./components/HeaderInside";
+import HeaderInside from "../general/components/HeaderInside";
 import Menu from "./components/Menu";
 import BookingTab from "./components/BookingTab";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const BookingIcon = () => {
   return (
@@ -45,7 +45,7 @@ const BookingIcon = () => {
       </View>
       <BottomMenu
         vector={require("../assets/vector1.png")}
-        tBottomMenuMarginTop={-30}
+        cBottomMenuMarginTop={-30}
         vector1={require("../assets/vector2.png")}
       />
     </ImageBackground>

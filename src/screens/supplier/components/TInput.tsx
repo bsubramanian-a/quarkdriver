@@ -88,7 +88,7 @@ const TInput = ({
 
   return (
     <TextInput
-      style={[styles.frameTextInput, styles.mt4, frameTextInputStyle]}
+      style={[styles.frameTextInput, frameTextInputStyle]}
       placeholder={frame458Placeholder}
       keyboardType="default"
       placeholderTextColor="#b6bfdd"

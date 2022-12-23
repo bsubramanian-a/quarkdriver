@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 const DriverInfo = () => {
   return (
-    <View style={[styles.driverInfo, styles.mt120]}>
+    <View style={styles.driverInfo}>
       <View style={styles.driverD}>
         <Image
           style={styles.ellipseIcon}

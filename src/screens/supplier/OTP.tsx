@@ -4,7 +4,7 @@ import HeaderNotification from "./components/HeaderNotification";
 import TInput from "./components/TInput";
 import SubmitBtn from "./components/SubmitBtn";
 import DisableBtn from "./components/DisableBtn";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const OTP = () => {
   return (

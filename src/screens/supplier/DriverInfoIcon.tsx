@@ -9,7 +9,7 @@ import {
 import HeaderInside from "./components/HeaderInside";
 import SupplierMenu from "./components/SupplierMenu";
 import DriverInfo from "./components/DriverInfo";
-import BottomMenu from "./components/BottomMenu";
+import BottomMenu from "../general/components/BottomMenu";
 
 const DriverInfoIcon = () => {
   return (
