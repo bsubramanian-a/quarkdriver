@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   framePressable: {
+    width: "100%",
     alignSelf: "stretch",
     borderRadius: 30,
     backgroundColor: "#ffb300",

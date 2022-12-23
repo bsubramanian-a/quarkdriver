@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
-import HeaderD from "../../driver/components/HeaderD";
-import ButtonWidth from "../../driver/components/ButtonWidth";
-import BottomMenu from "../../driver/components/BottomMenu";
+import HeaderD from "../driver/components/HeaderD";
+import ButtonWidth from "../driver/components/ButtonWidth";
+import BottomMenu from "../driver/components/BottomMenu";
 
 const Info = () => {
   return (
@@ -131,17 +131,17 @@ const Info = () => {
               </View>
             </View>
             <View style={styles.frameView22}>
+              <Image
+                style={styles.vectorIcon8}
+                resizeMode="cover"
+                source={require("../../assets/vector9.png")}
+              />
               <View style={styles.frameView21}>
                 <Text style={styles.pakagingText1}>
                   <Text style={styles.pakagingText}>{`Pakaging `}</Text>
                 </Text>
                 <Text style={[styles.bag25Kg, styles.mt4]}>Bag, 25 kg</Text>
               </View>
-              <Image
-                style={styles.vectorIcon8}
-                resizeMode="cover"
-                source={require("../../assets/vector9.png")}
-              />
             </View>
           </View>
         </View>
@@ -302,7 +302,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon4: {
-    position: "relative",
     width: 16,
     height: 16,
     flexShrink: 0,
@@ -396,7 +395,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon6: {
-    position: "relative",
     width: 20,
     height: 20,
     flexShrink: 0,
@@ -414,16 +412,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   vectorIcon7: {
-    position: "absolute",
-    height: "40.91%",
-    width: "14.77%",
-    top: "1.01%",
-    right: "85.23%",
-    bottom: "58.08%",
-    left: "0%",
-    maxWidth: "100%",
-    overflow: "hidden",
-    maxHeight: "100%",
+    height: 14,
+    width: 18,
+    marginEnd: 7,
   },
   commodityNameText: {
     fontSize: 12,
@@ -431,7 +422,6 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     color: "#e7e9f4",
     textAlign: "left",
-    width: 97,
   },
   casticSodaText: {
     fontSize: 11,
@@ -440,21 +430,22 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   frameView19: {
-    position: "absolute",
-    top: 0,
-    left: 25,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   frameView20: {
     alignSelf: "stretch",
-    width: 121.89,
+    flexDirection: "row",
+    width: "60%",
     flexShrink: 0,
   },
   pakagingText: {
-    marginStart: 0,
-    marginEnd: 0,
+    fontSize: 12,
+    fontWeight: "700",
+    fontFamily: "Roboto",
+    color: "#e7e9f4",
+    textAlign: "left",
   },
   pakagingText1: {
     fontSize: 12,
@@ -462,8 +453,6 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     color: "#e7e9f4",
     textAlign: "left",
-    width: 53,
-    height: 16,
   },
   bag25Kg: {
     fontSize: 11,
@@ -472,28 +461,19 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   frameView21: {
-    position: "absolute",
-    top: 0,
-    left: 27,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   vectorIcon8: {
-    position: "absolute",
-    height: "42.42%",
-    width: "25.27%",
-    top: "3.15%",
-    right: "74.73%",
-    bottom: "54.42%",
-    left: "0%",
-    maxWidth: "100%",
-    overflow: "hidden",
-    maxHeight: "100%",
+    height: 14,
+    width: 20,
+    marginEnd: 7,
   },
   frameView22: {
-    width: 79.13,
-    height: 33,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    width: "40%",
     flexShrink: 0,
   },
   frameView23: {
@@ -511,7 +491,6 @@ const styles = StyleSheet.create({
   },
   commodityInfoView: {
     alignSelf: "stretch",
-    height: 105,
     flexShrink: 0,
     flexDirection: "column",
     alignItems: "flex-start",
@@ -524,7 +503,6 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
   },
   infoView: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

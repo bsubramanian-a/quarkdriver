@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 import {
   ScrollView,
   Image,
@@ -33,7 +33,7 @@ const SignIn = () => {
 
   useFocusEffect(
     React.useCallback(() => {
-      if(route?.params){
+      if (route?.params) {
         setUtype(route.params.user_type);
       }
     }, [route?.params])
@@ -50,35 +50,35 @@ const SignIn = () => {
       .required('Password is required'),
   })
 
-  const onSubmit = (values:any) => {
+  const onSubmit = (values: any) => {
     console.log("form values", values);
     setErrorMessage("");
     setIsLoading(true);
 
-    dispatch(login({ email: values.email, password : values.password}))
+    dispatch(login({ email: values.email, password: values.password }))
       .unwrap()
       .then((res: any) => {
-          console.log("res", res);
-          if (res?.status == 409) {
-              setIsLoading(false);
-              setErrorMessage(res.message);
-          }else if (res.status == 200) {
-              setIsLoading(false);
-              setErrorMessage(res.message);
-              // navigate('Home')
-          }else{
-              setIsLoading(false);
-              setErrorMessage("Please try again");
-          }
-      })
-      .catch((error:any) => {
-          console.log("login error", error)
-          setErrorMessage(error.data.message);
+        console.log("res", res);
+        if (res?.status == 409) {
           setIsLoading(false);
+          setErrorMessage(res.message);
+        } else if (res.status == 200) {
+          setIsLoading(false);
+          setErrorMessage(res.message);
+          // navigate('Home')
+        } else {
+          setIsLoading(false);
+          setErrorMessage("Please try again");
+        }
+      })
+      .catch((error: any) => {
+        console.log("login error", error)
+        setErrorMessage(error.data.message);
+        setIsLoading(false);
       });
   }
 
-  const navigateToPage = (page:string) => {
+  const navigateToPage = (page: string) => {
     navigate(page);
   }
 
@@ -104,70 +104,67 @@ const SignIn = () => {
         validationSchema={loginValidationSchema}
         initialValues={{ email: '', password: '' }}
         onSubmit={values => onSubmit(values)}>
-          {({ handleChange, handleBlur, handleSubmit, values, errors, isValid }) => (
-            <View style={[styles.content, styles.mt12]}>
-              <Text style={styles.signIn}>Sign in</Text>
-              {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
-              <View style={[styles.formInput, styles.mt27]}>
-                <View style={styles.email}>
-                  <Text style={styles.emailID}>Email ID</Text>
-                  <TInput name="email" onChangeText={handleChange} onBlur={handleBlur}/>
-                  {errors.email &&
-                    <Text style={{ fontSize: 10, color: 'red' }}>{errors.email}</Text>
-                  }
-                </View>
-                <View style={[styles.password1, styles.mt13]}>
-                  <Text style={styles.password}>Password</Text>
-                  <PInput name="password" onChangeText={handleChange} onBlur={handleBlur} />
-                  {errors.password &&
-                    <Text style={{ fontSize: 10, color: 'red' }}>{errors.password}</Text>
-                  }
-                </View>
+        {({ handleChange, handleBlur, handleSubmit, values, errors, isValid }) => (
+          <View style={[styles.content, styles.mt12]}>
+            <Text style={styles.signIn}>Sign in</Text>
+            {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}
+            <View style={[styles.formInput, styles.mt27]}>
+              <View style={styles.email}>
+                <Text style={styles.emailID}>Email ID</Text>
+                <TInput name="email" onChangeText={handleChange} onBlur={handleBlur} />
+                {errors.email &&
+                  <Text style={{ fontSize: 10, color: 'red' }}>{errors.email}</Text>
+                }
               </View>
-              <View style={[styles.buttonLink, styles.mt27]}>
-                <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
-                <View style={[styles.linkButton, styles.mt19]}>
-                  <MainButton
-                    frame466MarginTop="unset"
-                    frame466Height={51}
-                    frame466FlexShrink={0}
-                    submit="Sign in"
-                    handleSubmit={handleSubmit}
-                    isLoading={isLoading}
-                  />
-                  <View style={[styles.divider, styles.mt28]}>
-                    <Image
-                      style={styles.vectorIcon}
-                      resizeMode="cover"
-                      source={require("../../assets/tick.png")}
-                    />
-                    <Text style={[styles.or, styles.ml6]}>Or</Text>
-                    <Image
-                      style={[styles.vectorIcon1, styles.ml6]}
-                      resizeMode="cover"
-                      source={require("../../assets/tick.png")}
-                    />
-                  </View>
-                  <GoogleButton />
-                  <View style={[styles.signupLink, styles.mt28]}>
-                    <Text style={styles.donotHaveAnAccount}>
-                      Donot have an account?
-                    </Text>
-                    <Pressable onPress={() => navigateToPage('Signup')}>
-                      <Text style={[styles.signUp, styles.mt11]}>Sign Up</Text>
-                    </Pressable>
-                  </View>
+              <View style={[styles.password1, styles.mt13]}>
+                <Text style={styles.password}>Password</Text>
+                <PInput name="password" onChangeText={handleChange} onBlur={handleBlur} />
+                {errors.password &&
+                  <Text style={{ fontSize: 10, color: 'red' }}>{errors.password}</Text>
+                }
+              </View>
+            </View>
+            <View style={[styles.buttonLink, styles.mt27]}>
+              <Text style={styles.forgetYourPasworrd}>Forget your Pasworrd?</Text>
+              <View style={[styles.linkButton, styles.mt19]}>
+                <MainButton
+                  frame466MarginTop="unset"
+                  frame466Height={51}
+                  frame466FlexShrink={0}
+                  submit="Sign in"
+                  handleSubmit={handleSubmit}
+                  isLoading={isLoading}
+                />
+                <View style={[styles.divider, styles.mt28]}>
+                  <View style={styles.line_view1}></View>
+                  <Text style={styles.or}>Or</Text>
+                  <View style={styles.line_view1}></View>
+                </View>
+                {/* <View style={[styles.divider, styles.mt28]}>
+                  <View style={styles.vectorIcon}></View>
+                  <Text style={[styles.or, styles.ml6]}>Or</Text>
+                  <View style={styles.vectorIcon}></View>
+                </View> */}
+                <GoogleButton />
+                <View style={[styles.signupLink, styles.mt28]}>
+                  <Text style={styles.donotHaveAnAccount}>
+                    Donot have an account?
+                  </Text>
+                  <Pressable onPress={() => navigateToPage('Signup')}>
+                    <Text style={[styles.signUp, styles.mt11]}>Sign Up</Text>
+                  </Pressable>
                 </View>
               </View>
             </View>
-          )}
+          </View>
+        )}
       </Formik>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  errTxt:{
+  errTxt: {
     color: 'red',
     marginVertical: 5
   },
@@ -204,14 +201,12 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   lOGO13: {
-    position: "relative",
     width: 99,
     height: 99,
     flexShrink: 0,
     overflow: "hidden",
   },
   qUARK: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -232,7 +227,6 @@ const styles = StyleSheet.create({
   },
   signIn: {
     alignSelf: "stretch",
-    position: "relative",
     fontSize: 18,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -240,7 +234,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   emailID: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -253,7 +246,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   password: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -279,35 +271,21 @@ const styles = StyleSheet.create({
     color: "#8493c7",
     textAlign: "center",
   },
-  vectorIcon: {
-    flex: 1,
-    position: "relative",
-    maxWidth: "100%",
-    overflow: "hidden",
-    height: 1,
-  },
   or: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "center",
   },
-  vectorIcon1: {
-    flex: 1,
-    position: "relative",
-    maxWidth: "100%",
-    overflow: "hidden",
-    height: 1,
-  },
   divider: {
     alignSelf: "stretch",
     flexDirection: "row",
     paddingHorizontal: 0,
     paddingTop: 8,
+    marginBottom: 28,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
   },
   donotHaveAnAccount: {
     alignSelf: "stretch",
@@ -346,7 +324,6 @@ const styles = StyleSheet.create({
   },
   content: {
     alignSelf: "stretch",
-    // flex: 1,
     flexDirection: "column",
     paddingHorizontal: 16,
     paddingBottom: 20,
@@ -354,13 +331,23 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   signIn1: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
     overflow: "hidden",
     maxWidth: "100%",
   },
+  line_view:{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 30
+   },
+   line_view1:{
+     width: '44%',
+     borderBottomWidth: 1,
+     borderColor: "#D8DEE8",
+   },
 });
 
 export default SignIn;
