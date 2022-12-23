@@ -9,7 +9,7 @@ const Progress = () => {
           <Image
             style={styles.frameIcon}
             resizeMode="cover"
-            source={require("../assets/frame-583.png")}
+            source={require("../../../assets/frame-583.png")}
           />
           <View style={[styles.frameView, styles.ml7]}>
             <Text style={styles.text}>10</Text>
@@ -23,7 +23,7 @@ const Progress = () => {
           <Image
             style={[styles.unionIcon, styles.ml6]}
             resizeMode="cover"
-            source={require("../assets/union.png")}
+            source={require("../../../assets/union.png")}
           />
         </View>
       </View>

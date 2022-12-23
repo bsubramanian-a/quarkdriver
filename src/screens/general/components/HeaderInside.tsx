@@ -18,7 +18,7 @@ const HeaderInside = ({ lOGO13 }: HeaderInsideType) => {
         <Image
           style={styles.combinedShapeIcon}
           resizeMode="cover"
-          source={require("../assets/combinedshape.png")}
+          source={require("../../../assets/combinedshape.png")}
         />
         <View style={styles.frameView}>
           <Image style={styles.lOGO13} resizeMode="cover" source={lOGO13} />
@@ -27,7 +27,7 @@ const HeaderInside = ({ lOGO13 }: HeaderInsideType) => {
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-76.png")}
+          source={require("../../../assets/ellipse-76.png")}
         />
       </View>
     </View>

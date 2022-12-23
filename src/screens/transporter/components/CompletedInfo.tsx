@@ -25,7 +25,7 @@ const CompletedInfo = ({ frame604MarginTop }: CompletedInfoType) => {
         <Image
           style={styles.packageIcon}
           resizeMode="cover"
-          source={require("../assets/package.png")}
+          source={require("../../../assets/package.png")}
         />
         <View style={[styles.packageDetails, styles.ml4]}>
           <Text style={styles.sansoTransportionCompany}>
@@ -41,7 +41,7 @@ const CompletedInfo = ({ frame604MarginTop }: CompletedInfoType) => {
             <Image
               style={styles.frameIcon}
               resizeMode="cover"
-              source={require("../assets/frame-609.png")}
+              source={require("../../../assets/frame-609.png")}
             />
             <View style={styles.frameView1} />
           </View>

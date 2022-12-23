@@ -8,20 +8,20 @@ const HeaderNotification = () => {
         <Image
           style={styles.combinedShapeIcon}
           resizeMode="cover"
-          source={require("../assets/combinedshape6.png")}
+          source={require("../../../assets/combinedshape6.png")}
         />
         <View style={styles.logoView}>
           <Image
             style={styles.lOGO13}
             resizeMode="cover"
-            source={require("../assets/logo-1-36.png")}
+            source={require("../../../assets/logo-1-36.png")}
           />
           <Text style={[styles.qUARK, styles.mt_7]}>QUARK</Text>
         </View>
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-766.png")}
+          source={require("../../../assets/ellipse-766.png")}
         />
       </View>
       <View style={[styles.groupView1, styles.mt47]}>

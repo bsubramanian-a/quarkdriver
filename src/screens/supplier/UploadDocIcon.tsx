@@ -16,10 +16,10 @@ const UploadDocIcon = () => {
     <ImageBackground
       style={styles.uploadDocIcon}
       resizeMode="stretch"
-      source={require("../assets/frame481.png")}
+      source={require("../../assets/frame481.png")}
     >
       <View style={styles.mainView}>
-        <HeaderInside lOGO13={require("../assets/logo-1-310.png")} />
+        <HeaderInside lOGO13={require("../../assets/logo-1-310.png")} />
         <ScrollView
           style={styles.frame}
           showsHorizontalScrollIndicator={false}
@@ -36,12 +36,12 @@ const UploadDocIcon = () => {
               <Image
                 style={styles.circleMinusIcon}
                 resizeMode="cover"
-                source={require("../assets/circleminus.png")}
+                source={require("../../assets/circleminus.png")}
               />
               <Image
                 style={styles.circleMinusIcon1}
                 resizeMode="cover"
-                source={require("../assets/circleminus1.png")}
+                source={require("../../assets/circleminus1.png")}
               />
             </View>
           </View>
@@ -49,14 +49,14 @@ const UploadDocIcon = () => {
         </ScrollView>
       </View>
       <BottomMenu
-        vector={require("../assets/vector49.png")}
-        vector1={require("../assets/vector46.png")}
+        vector={require("../../assets/vector49.png")}
+        vector1={require("../../assets/vector46.png")}
         cBottomMenuPaddingVertical={10}
         cBottomMenuHeight={75}
         cBottomMenuFlexShrink={0}
         cBottomMenuMarginTop={-30}
-        vector2={require("../assets/vector44.png")}
-        vector3={require("../assets/vector47.png")}
+        vector2={require("../../assets/vector44.png")}
+        vector3={require("../../assets/vector47.png")}
       />
     </ImageBackground>
   );

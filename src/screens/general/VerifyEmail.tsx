@@ -19,12 +19,12 @@ const VerifyEmail = () => {
       <ImageBackground
         style={styles.frameIcon}
         resizeMode="stretch"
-        source={require("../assets/frame4816.png")}
+        source={require("../../assets/frame4816.png")}
       >
         <Image
           style={styles.lOGO13}
           resizeMode="cover"
-          source={require("../assets/logo-1-39.png")}
+          source={require("../../assets/logo-1-39.png")}
         />
         <Text style={[styles.qUARK, styles.mt_7]}>QUARK</Text>
       </ImageBackground>

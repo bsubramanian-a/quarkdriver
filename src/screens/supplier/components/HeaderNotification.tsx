@@ -46,7 +46,7 @@ const HeaderNotification = ({
         <Image
           style={styles.combinedShapeIcon}
           resizeMode="cover"
-          source={require("../assets/combinedshape.png")}
+          source={require("../../../assets/combinedshape.png")}
         />
         <View style={styles.logoView}>
           <Image style={styles.lOGO13} resizeMode="cover" source={lOGO13} />
@@ -55,7 +55,7 @@ const HeaderNotification = ({
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-76.png")}
+          source={require("../../../assets/ellipse-76.png")}
         />
       </View>
       <View style={[styles.groupView1, styles.mt47, groupViewStyle]}>

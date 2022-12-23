@@ -16,27 +16,27 @@ const DriverInfoIcon = () => {
     <ImageBackground
       style={styles.driverInfoIcon}
       resizeMode="stretch"
-      source={require("../assets/frame4811.png")}
+      source={require("../../assets/frame4811.png")}
     >
       <View style={styles.headerTransporter}>
         <View style={styles.frameView1}>
           <Image
             style={styles.combinedShapeIcon}
             resizeMode="cover"
-            source={require("../assets/combinedshape.png")}
+            source={require("../../assets/combinedshape.png")}
           />
           <View style={styles.frameView}>
             <Image
               style={styles.lOGO13}
               resizeMode="cover"
-              source={require("../assets/logo-1-3.png")}
+              source={require("../../assets/logo-1-3.png")}
             />
             <Text style={[styles.qUARK, styles.mt_7]}>QUARK</Text>
           </View>
           <Image
             style={styles.ellipseIcon}
             resizeMode="cover"
-            source={require("../assets/ellipse-76.png")}
+            source={require("../../assets/ellipse-76.png")}
           />
         </View>
       </View>
@@ -56,20 +56,20 @@ const DriverInfoIcon = () => {
             <Image
               style={styles.circleMinusIcon}
               resizeMode="cover"
-              source={require("../assets/circleminus.png")}
+              source={require("../../assets/circleminus.png")}
             />
             <Image
               style={styles.circleMinusIcon1}
               resizeMode="cover"
-              source={require("../assets/circleminus1.png")}
+              source={require("../../assets/circleminus1.png")}
             />
           </View>
         </View>
         <DriverInfo />
       </ScrollView>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
-        vector1={require("../assets/vector2.png")}
+        vector={require("../../assets/vector1.png")}
+        vector1={require("../../assets/vector2.png")}
       />
     </ImageBackground>
   );

@@ -25,10 +25,10 @@ const ProgressBooking = () => {
         </View>
       </ScrollView>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
-        vector1={require("../assets/vector2.png")}
-        vector2={require("../assets/vector.png")}
-        vector3={require("../assets/vector3.png")}
+        vector={require("../../assets/vector1.png")}
+        vector1={require("../../assets/vector2.png")}
+        vector2={require("../../assets/vector.png")}
+        vector3={require("../../assets/vector3.png")}
       />
     </View>
   );

@@ -10,7 +10,7 @@ const LoadingInfo = () => {
   return (
     <View style={styles.loadingInfo}>
       <HeaderNotification
-        lOGO13={require("../assets/logo-1-32.png")}
+        lOGO13={require("../../assets/logo-1-32.png")}
         createNewBooking="Create New Booking"
       />
       <ScrollView
@@ -32,8 +32,8 @@ const LoadingInfo = () => {
       <BottomMenu
         vector={{ uri: "vector9@3x.png" }}
         vector1={{ uri: "vector6@3x.png" }}
-        vector2={require("../assets/vector.png")}
-        vector3={require("../assets/vector3.png")}
+        vector2={require("../../assets/vector.png")}
+        vector3={require("../../assets/vector3.png")}
       />
     </View>
   );

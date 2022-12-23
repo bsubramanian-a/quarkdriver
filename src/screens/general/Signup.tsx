@@ -34,7 +34,7 @@ const Signup = () => {
   useFocusEffect(
     React.useCallback(() => {
       if(route?.params){
-        setUtype(route.params.user_type);
+        setUtype(route.params.type);
       }
     }, [route?.params])
   );

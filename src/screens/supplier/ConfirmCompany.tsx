@@ -9,7 +9,7 @@ const ConfirmCompany = () => {
   return (
     <View style={styles.confirmCompany}>
       <HeaderNotification
-        lOGO13={require("../assets/logo-1-3.png")}
+        lOGO13={require("../../assets/logo-1-3.png")}
         createNewBooking="Create New Booking"
       />
       <ScrollView
@@ -29,10 +29,10 @@ const ConfirmCompany = () => {
         </View>
       </ScrollView>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
+        vector={require("../../assets/vector1.png")}
         vector1={{ uri: "vector6@3x.png" }}
-        vector2={require("../assets/vector.png")}
-        vector3={require("../assets/vector3.png")}
+        vector2={require("../../assets/vector.png")}
+        vector3={require("../../assets/vector3.png")}
       />
     </View>
   );

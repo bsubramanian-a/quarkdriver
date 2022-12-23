@@ -17,7 +17,7 @@ const Notification = () => {
               <Image
                 style={styles.ellipseIcon}
                 resizeMode="cover"
-                source={require("../assets/ellipse-83.png")}
+                source={require("../../assets/ellipse-83.png")}
               />
               <View style={[styles.frameView, styles.ml9]}>
                 <Text style={styles.katrinaPaweel}>Katrina Paweel</Text>
@@ -31,14 +31,14 @@ const Notification = () => {
           <Image
             style={[styles.vectorIcon, styles.mt10]}
             resizeMode="cover"
-            source={require("../assets/vector-17.png")}
+            source={require("../../assets/vector-17.png")}
           />
           <View style={[styles.frameView5, styles.mt10]}>
             <View style={styles.frameView4}>
               <Image
                 style={styles.ellipseIcon1}
                 resizeMode="cover"
-                source={require("../assets/ellipse-83.png")}
+                source={require("../../assets/ellipse-83.png")}
               />
               <View style={[styles.frameView3, styles.ml9]}>
                 <Text style={styles.saraKarlou}>Sara Karlou</Text>
@@ -52,14 +52,14 @@ const Notification = () => {
           <Image
             style={[styles.vectorIcon1, styles.mt10]}
             resizeMode="cover"
-            source={require("../assets/vector-17.png")}
+            source={require("../../assets/vector-17.png")}
           />
           <View style={[styles.frameView8, styles.mt10]}>
             <View style={styles.frameView7}>
               <Image
                 style={styles.ellipseIcon2}
                 resizeMode="cover"
-                source={require("../assets/ellipse-83.png")}
+                source={require("../../assets/ellipse-83.png")}
               />
               <View style={[styles.frameView6, styles.ml9]}>
                 <Text style={styles.peterAskara}>Peter Askara</Text>
@@ -73,7 +73,7 @@ const Notification = () => {
           <Image
             style={[styles.vectorIcon2, styles.mt10]}
             resizeMode="cover"
-            source={require("../assets/vector-17.png")}
+            source={require("../../assets/vector-17.png")}
           />
         </View>
       </ScrollView>
@@ -81,22 +81,22 @@ const Notification = () => {
         <Image
           style={styles.vectorIcon3}
           resizeMode="cover"
-          source={require("../assets/vector.png")}
+          source={require("../../assets/vector.png")}
         />
         <Image
           style={styles.vectorIcon4}
           resizeMode="cover"
-          source={require("../assets/vector37.png")}
+          source={require("../../assets/vector37.png")}
         />
         <Image
           style={styles.vectorIcon5}
           resizeMode="cover"
-          source={require("../assets/vector2.png")}
+          source={require("../../assets/vector2.png")}
         />
         <Image
           style={styles.vectorIcon6}
           resizeMode="cover"
-          source={require("../assets/vector39.png")}
+          source={require("../../assets/vector39.png")}
         />
       </View>
     </View>

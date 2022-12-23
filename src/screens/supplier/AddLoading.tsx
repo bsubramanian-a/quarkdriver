@@ -10,7 +10,7 @@ const AddLoading = () => {
   return (
     <View style={styles.addLoading}>
       <HeaderNotification
-        lOGO13={require("../assets/logo-1-3.png")}
+        lOGO13={require("../../assets/logo-1-3.png")}
         createNewBooking="Create New Booking"
       />
       <ScrollView
@@ -23,7 +23,7 @@ const AddLoading = () => {
             <Image
               style={styles.fill4Icon}
               resizeMode="cover"
-              source={require("../assets/fill4.png")}
+              source={require("../../assets/fill4.png")}
             />
           </View>
           <Text style={[styles.loadingInformation, styles.ml10]}>
@@ -76,8 +76,8 @@ const AddLoading = () => {
       <BottomMenu
         vector={{ uri: "vector9@3x.png" }}
         vector1={{ uri: "vector6@3x.png" }}
-        vector2={require("../assets/vector.png")}
-        vector3={require("../assets/vector3.png")}
+        vector2={require("../../assets/vector.png")}
+        vector3={require("../../assets/vector3.png")}
       />
     </View>
   );

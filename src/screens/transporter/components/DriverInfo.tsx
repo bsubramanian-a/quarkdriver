@@ -8,7 +8,7 @@ const DriverInfo = () => {
         <Image
           style={styles.ellipseIcon}
           resizeMode="cover"
-          source={require("../assets/ellipse-78.png")}
+          source={require("../../../assets/ellipse-78.png")}
         />
         <View style={[styles.frameView, styles.ml16]}>
           <Text style={styles.kevinLarsem}>Kevin Larsem</Text>

@@ -16,10 +16,10 @@ const DepartureInfoIcon = () => {
     <ImageBackground
       style={styles.departureInfoIcon}
       resizeMode="stretch"
-      source={require("../assets/frame481.png")}
+      source={require("../../assets/frame481.png")}
     >
       <View style={styles.mainView}>
-        <HeaderInside lOGO13={require("../assets/logo-1-33.png")} />
+        <HeaderInside lOGO13={require("../../assets/logo-1-33.png")} />
         <ScrollView
           style={styles.frame}
           showsHorizontalScrollIndicator={false}
@@ -36,12 +36,12 @@ const DepartureInfoIcon = () => {
               <Image
                 style={styles.circleMinusIcon}
                 resizeMode="cover"
-                source={require("../assets/circleminus.png")}
+                source={require("../../assets/circleminus.png")}
               />
               <Image
                 style={styles.circleMinusIcon1}
                 resizeMode="cover"
-                source={require("../assets/circleminus1.png")}
+                source={require("../../assets/circleminus1.png")}
               />
             </View>
           </View>
@@ -49,9 +49,9 @@ const DepartureInfoIcon = () => {
         </ScrollView>
       </View>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
+        vector={require("../../assets/vector1.png")}
         cBottomMenuMarginTop={-30}
-        vector1={require("../assets/vector22.png")}
+        vector1={require("../../assets/vector22.png")}
       />
     </ImageBackground>
   );

@@ -11,7 +11,7 @@ const MessageTab = () => {
             <Image
               style={styles.frameIcon}
               resizeMode="cover"
-              source={require("../assets/frame-631.png")}
+              source={require("../../../assets/frame-631.png")}
             />
             <View style={[styles.frameView, styles.ml16]}>
               <Text style={styles.sansoTransportionCompany}>
@@ -27,7 +27,7 @@ const MessageTab = () => {
             <Image
               style={styles.userImgIcon}
               resizeMode="cover"
-              source={require("../assets/userimg.png")}
+              source={require("../../../assets/userimg.png")}
             />
             <View style={[styles.frameView2, styles.ml6]}>
               <View style={styles.frameView1}>
@@ -59,7 +59,7 @@ const MessageTab = () => {
           <Image
             style={[styles.userImgIcon1, styles.ml6]}
             resizeMode="cover"
-            source={require("../assets/userimg1.png")}
+            source={require("../../../assets/userimg1.png")}
           />
         </View>
       </View>

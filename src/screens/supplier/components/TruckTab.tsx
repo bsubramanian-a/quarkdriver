@@ -10,7 +10,7 @@ const TruckTab = () => {
           <Image
             style={styles.frameIcon}
             resizeMode="cover"
-            source={require("../assets/frame-631.png")}
+            source={require("../../../assets/frame-631.png")}
           />
           <View style={[styles.frameView, styles.ml16]}>
             <Text style={styles.sansoTransportionCompany}>
@@ -26,7 +26,7 @@ const TruckTab = () => {
                 <Image
                   style={styles.profilePicIcon}
                   resizeMode="cover"
-                  source={require("../assets/profilepic1.png")}
+                  source={require("../../../assets/profilepic1.png")}
                 />
                 <Text style={[styles.kevinLarsem, styles.ml9]}>
                   kevin Larsem
@@ -37,7 +37,7 @@ const TruckTab = () => {
                   <ImageBackground
                     style={styles.rectangleIcon}
                     resizeMode="cover"
-                    source={require("../assets/rectangle.png")}
+                    source={require("../../../assets/rectangle.png")}
                   />
                   <Text style={styles.a11}>A1-1</Text>
                 </View>
@@ -51,7 +51,7 @@ const TruckTab = () => {
                 <Image
                   style={styles.profilePicIcon1}
                   resizeMode="cover"
-                  source={require("../assets/profilepic1.png")}
+                  source={require("../../../assets/profilepic1.png")}
                 />
                 <Text style={[styles.danielJanson, styles.ml9]}>
                   Daniel Janson
@@ -62,7 +62,7 @@ const TruckTab = () => {
                   <ImageBackground
                     style={styles.rectangleIcon1}
                     resizeMode="cover"
-                    source={require("../assets/rectangle.png")}
+                    source={require("../../../assets/rectangle.png")}
                   />
                   <Text style={styles.a12}>A1-2</Text>
                 </View>
@@ -76,7 +76,7 @@ const TruckTab = () => {
                 <Image
                   style={styles.profilePicIcon2}
                   resizeMode="cover"
-                  source={require("../assets/profilepic1.png")}
+                  source={require("../../../assets/profilepic1.png")}
                 />
                 <Text style={[styles.danielJanson1, styles.ml9]}>
                   Daniel Janson
@@ -87,7 +87,7 @@ const TruckTab = () => {
                   <ImageBackground
                     style={styles.rectangleIcon2}
                     resizeMode="cover"
-                    source={require("../assets/rectangle.png")}
+                    source={require("../../../assets/rectangle.png")}
                   />
                   <Text style={styles.a13}>A1-3</Text>
                 </View>

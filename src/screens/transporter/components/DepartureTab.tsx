@@ -10,7 +10,7 @@ const DepartureTab = () => {
           <Image
             style={styles.companyImgIcon}
             resizeMode="cover"
-            source={require("../assets/frame-631.png")}
+            source={require("../../../assets/frame-631.png")}
           />
           <View style={[styles.frameView, styles.ml16]}>
             <Text style={styles.sansoTransportionCompany}>

@@ -8,7 +8,7 @@ const UploadBtn = () => {
         <Image
           style={styles.documentIcon}
           resizeMode="cover"
-          source={require("../assets/document.png")}
+          source={require("../../../assets/document.png")}
         />
         <Text style={[styles.uploadMSDS, styles.ml4]}>Upload MSDS</Text>
       </View>

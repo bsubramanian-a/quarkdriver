@@ -23,8 +23,8 @@ const CompletedBooking = () => {
         <CompletedTab />
       </ScrollView>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
-        vector1={require("../assets/vector2.png")}
+        vector={require("../../assets/vector1.png")}
+        vector1={require("../../assets/vector2.png")}
       />
     </View>
   );

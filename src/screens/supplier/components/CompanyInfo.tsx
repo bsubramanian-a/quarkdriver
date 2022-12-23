@@ -25,7 +25,7 @@ const CompanyInfo = ({ frame651AlignSelf }: CompanyInfoType) => {
         <Image
           style={styles.frameIcon}
           resizeMode="cover"
-          source={require("../assets/frame-650.png")}
+          source={require("../../../assets/frame-650.png")}
         />
         <Text style={[styles.sansoTransportionCompany, styles.mt6]}>
           Sanso Transportion company

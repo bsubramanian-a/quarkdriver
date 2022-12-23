@@ -8,7 +8,7 @@ const CreateNew = () => {
         <Image
           style={styles.frameIcon}
           resizeMode="cover"
-          source={require("../assets/frame-578.png")}
+          source={require("../../../assets/frame-578.png")}
         />
         <View style={[styles.frameView1, styles.ml7]}>
           <Text style={styles.createNewBooking}>Create New Booking</Text>

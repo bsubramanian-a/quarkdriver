@@ -15,10 +15,10 @@ const TrucksIcon = () => {
     <ImageBackground
       style={styles.trucksIcon}
       resizeMode="stretch"
-      source={require("../assets/frame481.png")}
+      source={require("../../assets/frame481.png")}
     >
       <View style={styles.mainView}>
-        <HeaderInside lOGO13={require("../assets/logo-1-3.png")} />
+        <HeaderInside lOGO13={require("../../assets/logo-1-3.png")} />
         <ScrollView
           style={styles.frame}
           showsHorizontalScrollIndicator={false}
@@ -35,12 +35,12 @@ const TrucksIcon = () => {
               <Image
                 style={styles.circleMinusIcon}
                 resizeMode="cover"
-                source={require("../assets/circleminus.png")}
+                source={require("../../assets/circleminus.png")}
               />
               <Image
                 style={styles.circleMinusIcon1}
                 resizeMode="cover"
-                source={require("../assets/circleminus1.png")}
+                source={require("../../assets/circleminus1.png")}
               />
             </View>
           </View>
@@ -51,22 +51,22 @@ const TrucksIcon = () => {
         <Image
           style={styles.vectorIcon}
           resizeMode="cover"
-          source={require("../assets/vector.png")}
+          source={require("../../assets/vector.png")}
         />
         <Image
           style={styles.vectorIcon1}
           resizeMode="cover"
-          source={require("../assets/vector1.png")}
+          source={require("../../assets/vector1.png")}
         />
         <Image
           style={styles.vectorIcon2}
           resizeMode="cover"
-          source={require("../assets/vector2.png")}
+          source={require("../../assets/vector2.png")}
         />
         <Image
           style={styles.vectorIcon3}
           resizeMode="cover"
-          source={require("../assets/vector3.png")}
+          source={require("../../assets/vector3.png")}
         />
       </View>
     </ImageBackground>

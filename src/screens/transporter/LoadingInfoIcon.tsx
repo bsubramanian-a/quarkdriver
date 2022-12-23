@@ -16,10 +16,10 @@ const LoadingInfoIcon = () => {
     <ImageBackground
       style={styles.loadingInfoIcon}
       resizeMode="stretch"
-      source={require("../assets/frame481.png")}
+      source={require("../../assets/frame481.png")}
     >
       <View style={styles.mainView}>
-        <HeaderInside lOGO13={require("../assets/logo-1-3.png")} />
+        <HeaderInside lOGO13={require("../../assets/logo-1-3.png")} />
         <ScrollView
           style={styles.frame}
           showsHorizontalScrollIndicator={false}
@@ -36,12 +36,12 @@ const LoadingInfoIcon = () => {
               <Image
                 style={styles.circleMinusIcon}
                 resizeMode="cover"
-                source={require("../assets/circleminus.png")}
+                source={require("../../assets/circleminus.png")}
               />
               <Image
                 style={styles.circleMinusIcon1}
                 resizeMode="cover"
-                source={require("../assets/circleminus1.png")}
+                source={require("../../assets/circleminus1.png")}
               />
             </View>
           </View>
@@ -49,9 +49,9 @@ const LoadingInfoIcon = () => {
         </ScrollView>
       </View>
       <BottomMenu
-        vector={require("../assets/vector1.png")}
+        vector={require("../../assets/vector1.png")}
         cBottomMenuMarginTop={-30}
-        vector1={require("../assets/vector2.png")}
+        vector1={require("../../assets/vector2.png")}
       />
     </ImageBackground>
   );

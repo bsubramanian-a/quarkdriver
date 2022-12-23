@@ -16,10 +16,10 @@ const BookingIcon = () => {
     <ImageBackground
       style={styles.bookingIcon}
       resizeMode="stretch"
-      source={require("../assets/frame4811.png")}
+      source={require("../../assets/frame4811.png")}
     >
       <View style={styles.frame1}>
-        <HeaderInside lOGO13={require("../assets/logo-1-39.png")} />
+        <HeaderInside lOGO13={require("../../assets/logo-1-39.png")} />
         <ScrollView
           style={styles.frame}
           showsHorizontalScrollIndicator={false}
@@ -50,12 +50,12 @@ const BookingIcon = () => {
               <Image
                 style={styles.circleMinusIcon}
                 resizeMode="cover"
-                source={require("../assets/circleminus.png")}
+                source={require("../../assets/circleminus.png")}
               />
               <Image
                 style={styles.circleMinusIcon1}
                 resizeMode="cover"
-                source={require("../assets/circleminus1.png")}
+                source={require("../../assets/circleminus1.png")}
               />
             </View>
           </View>
@@ -63,14 +63,14 @@ const BookingIcon = () => {
         </ScrollView>
       </View>
       <BottomMenu
-        vector={require("../assets/vector45.png")}
-        vector1={require("../assets/vector46.png")}
+        vector={require("../../assets/vector45.png")}
+        vector1={require("../../assets/vector46.png")}
         cBottomMenuPaddingVertical={10}
         cBottomMenuHeight={75}
         cBottomMenuFlexShrink={0}
         cBottomMenuMarginTop={-80}
-        vector2={require("../assets/vector44.png")}
-        vector3={require("../assets/vector47.png")}
+        vector2={require("../../assets/vector44.png")}
+        vector3={require("../../assets/vector47.png")}
       />
     </ImageBackground>
   );
