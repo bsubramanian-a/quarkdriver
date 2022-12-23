@@ -1,7 +1,7 @@
 import React, { useRef, useState }  from "react";
 import { Text, StyleSheet, View } from "react-native";
 import LoginLogo from "../driver/components/LoginLogo";
-import MainButton from "../driver/components/MainButton";
+import MainButton from "../general/components/MainButton";
 import PhoneInput from "@therightfit/react-native-phone-number-input"
 import { useDispatch } from "react-redux";
 import { loginWithOtp } from '../../slices/auth';

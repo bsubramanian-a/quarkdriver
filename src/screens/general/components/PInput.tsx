@@ -1,13 +1,16 @@
 import * as React from "react";
 import { TextInput, StyleSheet } from "react-native";
 
-const PInput = () => {
+const PInput = ({onChangeText, onBlur, name}:any) => {
   return (
     <TextInput
       style={[styles.frameTextInput, styles.mt4]}
       placeholder="enter password"
       keyboardType="default"
       placeholderTextColor="#b6bfdd"
+      onChangeText={onChangeText(name)}
+      onBlur={onBlur(name)}
+      secureTextEntry
     />
   );
 };

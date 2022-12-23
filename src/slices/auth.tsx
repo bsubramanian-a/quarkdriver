@@ -167,6 +167,7 @@ const authSlice = createSlice({
     builder.addCase(login.fulfilled, (state, action) => {
       state.isLoggedIn = true;
       state.user = action.payload.user;
+      state.access_token = action.payload.token
     });
 
     builder.addCase(verifyLoginOtp.fulfilled, (state, action) => {

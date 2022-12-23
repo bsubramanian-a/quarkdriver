@@ -7,7 +7,7 @@ const GoogleButton = () => {
       <Image
         style={styles.carbonlogoGoogleIcon}
         resizeMode="cover"
-        source={require("../assets/carbonlogogoogle.png")}
+        source={require("../../../assets/tick.png")}
       />
       <Text style={[styles.loginWithGoogle, styles.ml10]}>
         Login with Google

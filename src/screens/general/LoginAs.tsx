@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Text, StyleSheet, View, } from "react-native";
 import LoginLogo from "../driver/components/LoginLogo";
 import CheckboxLabel from "../driver/components/CheckboxLabel";
-import MainButton from "../driver/components/MainButton";
+import MainButton from "../general/components/MainButton";
 // import CheckBox from "../driver/components/CheckboxCustom";
 import CheckBox from '@react-native-community/checkbox';
 import { useNavigation } from '@react-navigation/native';
@@ -28,11 +28,11 @@ const LoginAs = () => {
     setUtype(type);
     if(type == 'driver'){
       setUserType({...userType, driver : value, buyer : false, receiver : false, company : false})
-    }else if(type == 'buyer'){
+    }else if(type == 'supplier'){
       setUserType({...userType, driver : false, buyer : value, receiver : false, company : false})
     }else if(type == 'receiver'){
       setUserType({...userType, driver : false, buyer : false, receiver : value, company : false})
-    }else if(type == 'company'){
+    }else if(type == 'transporter'){
       setUserType({...userType, driver : false, buyer : false, receiver : false, company : value})
     }else{
       setUserType({...userType, driver : false, buyer : false, receiver : false, company : false})
@@ -40,7 +40,7 @@ const LoginAs = () => {
   }
   
   const onSubmit = () => {
-    navigate('Register', {user_type : uType})
+    navigate(uType == 'driver' ? 'Register' : 'SignIn', {user_type : uType})
   }
 
   return (
@@ -74,9 +74,9 @@ const LoginAs = () => {
             <CheckBox
               disabled={false}
               value={userType.buyer}
-              onValueChange={(newValue) => changeUserType(newValue, 'buyer')}
+              onValueChange={(newValue) => changeUserType(newValue, 'supplier')}
             />
-            <Text>Buyer</Text>
+            <Text>Supplier</Text>
           </View>
 
           <View style={styles.checkbox}>
@@ -92,7 +92,7 @@ const LoginAs = () => {
             <CheckBox
               disabled={false}
               value={userType.company}
-              onValueChange={(newValue) => changeUserType(newValue, 'company')}
+              onValueChange={(newValue) => changeUserType(newValue, 'transporter')}
             />
             <Text>Transportation company</Text>
           </View>

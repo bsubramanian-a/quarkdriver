@@ -7,7 +7,7 @@ import Mainstack from './mainstack';
 const Routes = () => {
   const Stack = createStackNavigator();
   const { user, access_token } = useSelector((state: any) => state.auth);
-  console.log("access token :", access_token);
+  console.log("access token route:", access_token);
 
   return (    
       <>

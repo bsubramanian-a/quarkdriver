@@ -19,6 +19,9 @@ type TInputType = {
   frame458FontFamily?: string;
   frame458Flex?: number;
   frame458BackgroundColor?: string;
+  onChangeText:any;
+  onBlur:any;
+  name:string;
 };
 
 const getStyleValue = (key: string, value: string | number | undefined) => {
@@ -42,6 +45,9 @@ const TInput = ({
   frame458FontFamily,
   frame458Flex,
   frame458BackgroundColor,
+  onChangeText,
+  onBlur,
+  name
 }: TInputType) => {
   const frameTextInputStyle = useMemo(() => {
     return {
@@ -85,6 +91,8 @@ const TInput = ({
       placeholder="sample@email.com "
       keyboardType="email-address"
       placeholderTextColor="#b6bfdd"
+      onChangeText={onChangeText(name)}
+      onBlur={onBlur(name)}
     />
   );
 };

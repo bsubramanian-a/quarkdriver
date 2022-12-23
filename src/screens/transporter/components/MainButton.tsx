@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useMemo } from "react";
-import { Pressable, Text, StyleSheet } from "react-native";
+import { Pressable, Text, StyleSheet, ActivityIndicator } from "react-native";
 
 type MainButtonType = {
   submit?: string;
@@ -9,6 +9,8 @@ type MainButtonType = {
   frame466MarginTop?: number | string;
   frame466Height?: number | string;
   frame466FlexShrink?: number;
+  handleSubmit:any;
+  isLoading:any;
 };
 
 const getStyleValue = (key: string, value: string | number | undefined) => {
@@ -21,6 +23,8 @@ const MainButton = ({
   frame466Height,
   frame466FlexShrink,
   submit,
+  handleSubmit,
+  isLoading
 }: MainButtonType) => {
   const framePressableStyle = useMemo(() => {
     return {
@@ -31,10 +35,10 @@ const MainButton = ({
   }, [frame466MarginTop, frame466Height, frame466FlexShrink]);
 
   return (
-    <Pressable
+    <Pressable onPress={handleSubmit} disabled={isLoading}
       style={[styles.framePressable, styles.mt30, framePressableStyle]}
     >
-      <Text style={styles.submit}>{submit}</Text>
+      {!isLoading ? <Text style={styles.submit}>{submit}</Text> : <ActivityIndicator size="small" color="#0000ff" />}
     </Pressable>
   );
 };

@@ -55,8 +55,8 @@ const VerifyOTP = () => {
             }else if (res.status == 200) {
                 setIsLoading(false);
                 setErrorMessage(res.message);
-                const user = JSON.parse(await AsyncStorage.getItem('user') || "{}");
-                console.log("res user", user);
+                // const user = JSON.parse(await AsyncStorage.getItem('user') || "{}");
+                // console.log("res user", user);
                 navigate('Home')
             }else{
                 setIsLoading(false);

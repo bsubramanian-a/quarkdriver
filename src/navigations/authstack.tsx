@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LoginAs from '../screens/driver/LoginAs';
+import LoginAs from '../screens/general/LoginAs';
 import Register from '../screens/driver/Register';
 import VerifyOTP from '../screens/driver/VerifyOTP';
 import Home from '../screens/driver/Home';
@@ -19,7 +19,9 @@ import BookingSoon from '../screens/driver/BookingSoon';
 import BookingConfirmed from '../screens/driver/BookingConfirmed';
 import Info from '../screens/driver/Info';
 import ExportDoc from '../screens/driver/ExportDoc'
-
+import SignIn from '../screens/general/SignIn';
+import ResetPassword from '../screens/general/ResetPassword';
+import Signup from '../screens/general/Signup';
 
 // create a component
 const Authstack = (Stack:any) => {
@@ -28,9 +30,12 @@ const Authstack = (Stack:any) => {
             headerShown: false
           }}>
             <Stack.Screen name="LoginAs" component={LoginAs} />
+            <Stack.Screen name="Signup" component={Signup} />
             <Stack.Screen name="Register" component={Register} />
             <Stack.Screen name="VerifyOTP" component={VerifyOTP} />
+            <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="ExportDoc" component={ExportDoc} />
+            <Stack.Screen name="ResetPassword" component={ResetPassword} />
         </Stack.Navigator>
     );
 };

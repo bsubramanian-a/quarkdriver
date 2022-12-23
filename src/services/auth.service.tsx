@@ -46,7 +46,10 @@ const login = (email:string, password:string) => {
       email,
       password
     })
-    .then((response) => {
+    .then(async(response) => {
+      console.log("login service res", response.data)
+      await AsyncStorage.setItem('user', JSON.stringify(response.data.user));
+      await AsyncStorage.setItem('access_token', JSON.stringify(response.data.token));
       return response.data;
     });
 };
@@ -72,7 +75,7 @@ const verifyLoginOtp = (phone:string, otp:string) => {
     .then(async(response) => {
       console.log("verify login service", response);
       await AsyncStorage.setItem('user', JSON.stringify(response.data.user));
-      await AsyncStorage.setItem('access_token', JSON.stringify(response.data.user));
+      await AsyncStorage.setItem('access_token', JSON.stringify(response.data.token));
       return response.data;
     });
 };
