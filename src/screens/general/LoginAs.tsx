@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Text, StyleSheet, View, } from "react-native";
 import LoginLogo from "../driver/components/LoginLogo";
 import CheckboxLabel from "../driver/components/CheckboxLabel";
@@ -10,37 +10,37 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 const LoginAs = () => {
   type Nav = {
-    navigate: (value: string, {}) => void;
+    navigate: (value: string, { }) => void;
   }
-  
+
   const { navigate } = useNavigation<Nav>()
 
   const [userType, setUserType] = useState({
-    driver : false,
-    buyer : false,
-    receiver : false,
+    driver: false,
+    buyer: false,
+    receiver: false,
     company: false
   });
 
   const [uType, setUtype] = useState('');
 
-  const changeUserType = (value:boolean, type:string) => {
+  const changeUserType = (value: boolean, type: string) => {
     setUtype(type);
-    if(type == 'driver'){
-      setUserType({...userType, driver : value, buyer : false, receiver : false, company : false})
-    }else if(type == 'supplier'){
-      setUserType({...userType, driver : false, buyer : value, receiver : false, company : false})
-    }else if(type == 'receiver'){
-      setUserType({...userType, driver : false, buyer : false, receiver : value, company : false})
-    }else if(type == 'transporter'){
-      setUserType({...userType, driver : false, buyer : false, receiver : false, company : value})
-    }else{
-      setUserType({...userType, driver : false, buyer : false, receiver : false, company : false})
+    if (type == 'driver') {
+      setUserType({ ...userType, driver: value, buyer: false, receiver: false, company: false })
+    } else if (type == 'supplier') {
+      setUserType({ ...userType, driver: false, buyer: value, receiver: false, company: false })
+    } else if (type == 'receiver') {
+      setUserType({ ...userType, driver: false, buyer: false, receiver: value, company: false })
+    } else if (type == 'transporter') {
+      setUserType({ ...userType, driver: false, buyer: false, receiver: false, company: value })
+    } else {
+      setUserType({ ...userType, driver: false, buyer: false, receiver: false, company: false })
     }
   }
-  
+
   const onSubmit = () => {
-    navigate(uType == 'driver' ? 'Register' : 'SignIn', {user_type : uType})
+    navigate(uType == 'driver' ? 'Register' : 'SignIn', { user_type: uType })
   }
 
   return (
@@ -67,16 +67,16 @@ const LoginAs = () => {
               value={userType.driver}
               onValueChange={(newValue) => changeUserType(newValue, 'driver')}
             />
-            <Text>Driver</Text>
+            <Text style={styles.typeName}>Driver</Text>
           </View>
-          
+
           <View style={styles.checkbox}>
             <CheckBox
               disabled={false}
               value={userType.buyer}
               onValueChange={(newValue) => changeUserType(newValue, 'supplier')}
             />
-            <Text>Supplier</Text>
+            <Text style={styles.typeName}>Supplier</Text>
           </View>
 
           <View style={styles.checkbox}>
@@ -85,7 +85,7 @@ const LoginAs = () => {
               value={userType.receiver}
               onValueChange={(newValue) => changeUserType(newValue, 'receiver')}
             />
-            <Text>Receiver</Text>
+            <Text style={styles.typeName}>Receiver</Text>
           </View>
 
           <View style={styles.checkbox}>
@@ -94,21 +94,24 @@ const LoginAs = () => {
               value={userType.company}
               onValueChange={(newValue) => changeUserType(newValue, 'transporter')}
             />
-            <Text>Transportation company</Text>
+            <Text style={styles.typeName}>Transportation company</Text>
           </View>
         </View>
-        <TouchableOpacity onPress={onSubmit}>
-          <MainButton submit="Submit" />
-        </TouchableOpacity>
+        <View style={styles.btnView}>
+          <TouchableOpacity onPress={onSubmit}>
+            <MainButton submit="Submit" />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  checkbox:{
+  checkbox: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 24,
   },
   mt24: {
     marginTop: 24,
@@ -119,6 +122,16 @@ const styles = StyleSheet.create({
   mt38: {
     marginTop: 38,
   },
+  typeName: {
+    marginStart: 15,
+  },
+  cBox: {
+    width: 24,
+    height: 24,
+  },
+  btnView: {
+    width: "100%",
+  },
   pleaseChooseOneOfFollowing: {
     fontSize: 14,
     fontFamily: "Roboto",
@@ -126,6 +139,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   frameView: {
+    width: "100%",
     flexDirection: "column",
     paddingHorizontal: 0,
     paddingBottom: 17,
