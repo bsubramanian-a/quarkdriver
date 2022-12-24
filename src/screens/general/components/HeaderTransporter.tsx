@@ -1,8 +1,21 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View, Image, TextInput, Pressable } from "react-native";
 import TInput from "./TInput";
+import { useDispatch } from "react-redux";
+import { logout } from '../../../slices/auth';
+import { useNavigation } from '@react-navigation/native';
 
 const HeaderTransporter = () => {
+  const dispatch = useDispatch<any>();
+  type Nav = {
+    navigate: (value: string) => void;
+  }
+  const { navigate } = useNavigation<Nav>()
+  const handleLogout = () => {
+      dispatch(logout());   
+      navigate('/')         
+  };
+
   return (
     <View style={styles.headerTransporter}>
       <View style={styles.profileView}>
@@ -12,14 +25,25 @@ const HeaderTransporter = () => {
             Track your shippment
           </Text>
         </View>
-        <Image
-          style={styles.profilePicIcon}
-          resizeMode="cover"
-          source={require("../../../assets/profilepic.png")}
-        />
+       <View>
+          <Pressable onPress={handleLogout}>
+            <Text style={{fontSize: 17, color: "#fff", marginBottom: 10}}>Logout</Text>
+          </Pressable>
+          <Image
+            style={styles.profilePicIcon}
+            resizeMode="cover"
+            source={require("../../../assets/profilepic.png")}
+          />
+        </View>
       </View>
       <View style={[styles.inputView, styles.mt25]}>
-        <TInput
+        <TextInput
+          style={styles.textInput}
+          placeholder="Inter booking number"
+          keyboardType="default"
+          placeholderTextColor="#b6bfdd"
+        />
+        {/* <TInput
           frame458Color="unset"
           frame458MarginTop="unset"
           frame458AlignSelf="unset"
@@ -31,7 +55,7 @@ const HeaderTransporter = () => {
           frame458FontFamily="unset"
           frame458Flex={1}
           frame458BackgroundColor="#fff"
-        />
+        /> */}
         <Image
           style={[styles.logisticIcon, styles.ml17]}
           resizeMode="cover"
@@ -43,6 +67,17 @@ const HeaderTransporter = () => {
 };
 
 const styles = StyleSheet.create({
+  textInput: {
+    flex: 1,
+    borderRadius: 10,
+    backgroundColor: "#fff",
+    height: 45,
+    flexDirection: "row",
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
   mt10: {
     marginTop: 10,
   },

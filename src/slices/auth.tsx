@@ -224,6 +224,7 @@ const authSlice = createSlice({
     builder.addCase(logout.fulfilled, (state) => {
       state.isLoggedIn = false;
       state.user = null;
+      state.access_token = null;
     });
   }
 });

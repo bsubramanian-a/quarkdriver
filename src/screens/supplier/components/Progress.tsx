@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
     paddingBottom: 36,
     alignItems: "center",
     justifyContent: "center",
+    marginVertical: 20
   },
 });
 

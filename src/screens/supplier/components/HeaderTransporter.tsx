@@ -1,7 +1,20 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image, TextInput } from "react-native";
+import { Text, StyleSheet, View, Image, TextInput, Pressable } from "react-native";
+import { useDispatch } from "react-redux";
+import { logout } from '../../../slices/auth';
+import { useNavigation } from '@react-navigation/native';
 
 const HeaderTransporter = () => {
+  const dispatch = useDispatch<any>();
+  type Nav = {
+    navigate: (value: string) => void;
+  }
+  const { navigate } = useNavigation<Nav>()
+  const handleLogout = () => {
+      dispatch(logout());   
+      navigate('/')         
+  };
+  
   return (
     <View style={styles.headerTransporter}>
       <View style={styles.profileView}>
@@ -11,11 +24,16 @@ const HeaderTransporter = () => {
             Track your shippment
           </Text>
         </View>
-        <Image
-          style={styles.profilePicIcon}
-          resizeMode="cover"
-          source={require("../../../assets/profilepic.png")}
-        />
+        <View>
+          <Pressable onPress={handleLogout}>
+            <Text style={{fontSize: 17, color: "#fff", marginBottom: 10}}>Logout</Text>
+          </Pressable>
+          <Image
+            style={styles.profilePicIcon}
+            resizeMode="cover"
+            source={require("../../../assets/profilepic.png")}
+          />
+        </View>
       </View>
       <View style={[styles.inputView, styles.mt25]}>
         <TextInput

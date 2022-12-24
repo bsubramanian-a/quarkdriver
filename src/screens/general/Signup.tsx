@@ -25,6 +25,7 @@ const Signup = () => {
 
   const [formattedValue, setFormattedValue] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch<any>();
   const { navigate } = useNavigation<Nav>()
@@ -56,6 +57,7 @@ const Signup = () => {
   const onSubmit = (values:any, resetForm:any) => {
     console.log("form values", values);
     setErrorMessage("");
+    setSuccessMessage("");
     setIsLoading(true);
 
     dispatch(register({ email: values.email, password : values.password, type: uType}))
@@ -67,7 +69,7 @@ const Signup = () => {
               setErrorMessage(res.message);
           }else if (res.status == 200) {
               setIsLoading(false);
-              setErrorMessage(res.message);
+              setSuccessMessage(res.message);
               resetForm({values: ""});
               // navigate('Home')
           }else{
@@ -116,6 +118,7 @@ const Signup = () => {
           </View>
         </View>
         {errorMessage && <Text style={styles.errTxt}>{errorMessage}</Text>}   
+        {successMessage && <Text style={styles.successTxt}>{successMessage}</Text>}
         <View style={[styles.form, styles.mt12]}>
           <View style={styles.formInput}>
             <View style={styles.email}>
@@ -184,6 +187,12 @@ const Signup = () => {
 const styles = StyleSheet.create({
   errTxt:{
     color: 'red',
+    textAlign: 'center',
+    marginVertical: 5
+  },
+  successTxt:{
+    textAlign: 'center',
+    color: 'green',
     marginVertical: 5
   },
   mt_7: {
