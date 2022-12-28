@@ -41,13 +41,11 @@ const styles = StyleSheet.create({
     marginTop: 47,
   },
   combinedShapeIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
   },
   lOGO13: {
-    position: "relative",
     width: 55,
     height: 55,
     flexShrink: 0,
@@ -55,7 +53,6 @@ const styles = StyleSheet.create({
   },
   qUARK: {
     alignSelf: "stretch",
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -68,7 +65,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   ellipseIcon: {
-    position: "relative",
     width: 40,
     height: 40,
     flexShrink: 0,
@@ -80,9 +76,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   notification: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 18,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -90,16 +83,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   groupView: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: 95,
-    height: 21,
+    flexShrink: 0,
   },
   groupView1: {
-    position: "relative",
-    width: 95,
-    height: 21,
     flexShrink: 0,
   },
   headerTransporter: {

@@ -41,7 +41,6 @@ const CompletedBtn = ({
 
 const styles = StyleSheet.create({
   text: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",

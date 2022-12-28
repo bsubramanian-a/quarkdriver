@@ -12,10 +12,10 @@ const Completed = () => {
             source={require("../../../assets/frame-589.png")}
           />
           <View style={[styles.frameView, styles.ml7]}>
-            <Text style={styles.text}>10</Text>
+            <Text style={styles.text}>15</Text>
             <Text
               style={[styles.inProgressBookings, styles.mt4]}
-            >{`In progress Bookings `}</Text>
+            >{`Completed Bookings `}</Text>
           </View>
         </View>
         <View style={styles.frameView2}>
@@ -42,13 +42,11 @@ const styles = StyleSheet.create({
     marginLeft: 6,
   },
   frameIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
   },
   text: {
-    position: "relative",
     fontSize: 24,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -56,7 +54,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   inProgressBookings: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#fff",
@@ -75,14 +72,12 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   viewAll: {
-    position: "relative",
     fontSize: 10,
     fontFamily: "Roboto",
     color: "#ffb300",
     textAlign: "left",
   },
   unionIcon: {
-    position: "relative",
     width: 6,
     height: 10,
     flexShrink: 0,

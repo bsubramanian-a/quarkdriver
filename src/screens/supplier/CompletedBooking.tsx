@@ -9,8 +9,6 @@ const CompletedBooking = () => {
     <View style={styles.completedBooking}>
       <HeaderNotification
         lOGO13={{ uri: "logo-1-35@3x.png" }}
-        group425Width={169}
-        group410Width={169}
         createNewBooking="Completed Bookings "
       />
       <ScrollView

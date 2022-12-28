@@ -7,6 +7,7 @@ import {
   ImageBackground,
 } from "react-native";
 import HeaderInside from "../general/components/HeaderInside";
+import BottomMenu from "../general/components/BottomMenu";
 import Menu from "./components/Menu";
 import TrucksTab from "./components/TrucksTab";
 
@@ -47,28 +48,7 @@ const TrucksIcon = () => {
           <TrucksTab />
         </ScrollView>
       </View>
-      <View style={[styles.tBottomMenu, styles.mt_30]}>
-        <Image
-          style={styles.vectorIcon}
-          resizeMode="cover"
-          source={require("../../assets/vector.png")}
-        />
-        <Image
-          style={styles.vectorIcon1}
-          resizeMode="cover"
-          source={require("../../assets/vector1.png")}
-        />
-        <Image
-          style={styles.vectorIcon2}
-          resizeMode="cover"
-          source={require("../../assets/vector2.png")}
-        />
-        <Image
-          style={styles.vectorIcon3}
-          resizeMode="cover"
-          source={require("../../assets/vector3.png")}
-        />
-      </View>
+      <BottomMenu />
     </ImageBackground>
   );
 };
@@ -86,14 +66,12 @@ const styles = StyleSheet.create({
     marginTop: -30,
   },
   circleMinusIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
     overflow: "hidden",
   },
   circleMinusIcon1: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
@@ -121,6 +99,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   frameView: {
+    marginBottom: 90,
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "flex-start",
@@ -137,46 +116,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
-  vectorIcon: {
-    position: "relative",
-    width: 25,
-    height: 27,
-    flexShrink: 0,
-  },
-  vectorIcon1: {
-    position: "relative",
-    width: 25,
-    height: 27,
-    flexShrink: 0,
-  },
-  vectorIcon2: {
-    position: "relative",
-    width: 21,
-    height: 27,
-    flexShrink: 0,
-  },
-  vectorIcon3: {
-    position: "relative",
-    width: 23,
-    height: 27,
-    flexShrink: 0,
-  },
-  tBottomMenu: {
-    alignSelf: "stretch",
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    backgroundColor: "#5469b1",
-    height: 75,
-    flexShrink: 0,
-    overflow: "hidden",
-    flexDirection: "row",
-    paddingHorizontal: 54,
-    paddingVertical: 10,
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
   trucksIcon: {
-    position: "relative",
     flex: 1,
     width: "100%",
     height: 805,

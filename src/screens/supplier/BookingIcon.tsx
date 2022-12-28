@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   sizeAdjusterIcons: {
+    marginBottom: 90,
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "flex-start",

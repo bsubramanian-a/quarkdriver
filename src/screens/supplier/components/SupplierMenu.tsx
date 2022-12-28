@@ -95,7 +95,6 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   text: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -113,7 +112,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text1: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -131,7 +129,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text2: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -149,7 +146,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text3: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -158,7 +154,6 @@ const styles = StyleSheet.create({
   frameView3: {
     borderRadius: 40,
     backgroundColor: "#fff",
-    width: 109,
     flexShrink: 0,
     flexDirection: "row",
     paddingHorizontal: 24,

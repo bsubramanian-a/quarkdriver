@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   frameView: {
+    marginBottom: 90,
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "flex-start",
