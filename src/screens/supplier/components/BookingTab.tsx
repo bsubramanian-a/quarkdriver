@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   lineView: {
-    position: "relative",
     borderStyle: "solid",
     borderColor: "#1a3596",
     borderTopWidth: 1,
@@ -82,28 +81,23 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   companyImgIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
   },
   sansoTransportionCompany: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "left",
-    width: 193,
   },
   tRPO123: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "center",
-    width: 74,
   },
   frameView: {
     flexDirection: "column",

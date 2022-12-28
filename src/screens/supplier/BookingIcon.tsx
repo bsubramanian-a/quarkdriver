@@ -10,13 +10,14 @@ import {
 import HeaderInside from "./components/HeaderInside";
 import BookingTab from "./components/BookingTab";
 import BottomMenu from "../general/components/BottomMenu";
+import SupplierMenu from "../supplier/components/SupplierMenu";
 
 const BookingIcon = () => {
   return (
     <ImageBackground
       style={styles.bookingIcon}
       resizeMode="stretch"
-      source={require("../../assets/frame4811.png")}
+      source={require("../../assets/frame481.png")}
     >
       <View style={styles.frame1}>
         <HeaderInside lOGO13={require("../../assets/logo-1-39.png")} />
@@ -25,26 +26,7 @@ const BookingIcon = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.frameScrollViewContent}
         >
-          <ScrollView
-            style={styles.menu}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={styles.menuScrollViewContent}
-          >
-            <View style={styles.frameView}>
-              <Text style={styles.text}>Booking</Text>
-            </View>
-            <View style={[styles.frameView1, styles.ml4]}>
-              <Text style={styles.text1}>Trucks</Text>
-            </View>
-            <View style={[styles.frameView2, styles.ml4]}>
-              <Text style={styles.text2}>Uploading Documents</Text>
-            </View>
-            <View style={[styles.frameView3, styles.ml4]}>
-              <Text style={styles.text3}>Messages</Text>
-            </View>
-          </ScrollView>
+          <SupplierMenu />
           <View style={[styles.sizeAdjusterIcons, styles.mt90]}>
             <View style={styles.button}>
               <Image
@@ -97,7 +79,6 @@ const styles = StyleSheet.create({
     marginTop: -80,
   },
   text: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -115,7 +96,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text1: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -133,7 +113,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text2: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -151,7 +130,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   text3: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -173,14 +151,12 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   circleMinusIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
     overflow: "hidden",
   },
   circleMinusIcon1: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
@@ -226,7 +202,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   bookingIcon: {
-    position: "relative",
     flex: 1,
     width: "100%",
     overflow: "hidden",

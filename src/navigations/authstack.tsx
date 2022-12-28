@@ -6,12 +6,14 @@ import SignIn from '../screens/general/SignIn';
 import ResetPassword from '../screens/general/ResetPassword';
 import Signup from '../screens/general/Signup';
 import SplashScreen from '../screens/general/SplashScreen';
+import DriverInfoIcon from '../screens/transporter/DriverInfoIcon';
 // create a component
 const Authstack = (Stack:any) => {
     return (
         <Stack.Navigator screenOptions={{
             headerShown: false
           }}>
+            <Stack.Screen name="DriverInfoIcon" component={DriverInfoIcon} />
             <Stack.Screen name="LoginAs" component={LoginAs} />
             <Stack.Screen name="Signup" component={Signup} />
             <Stack.Screen name="Register" component={Register} />

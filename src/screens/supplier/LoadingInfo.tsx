@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   loadingInfo: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

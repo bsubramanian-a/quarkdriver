@@ -70,14 +70,12 @@ const styles = StyleSheet.create({
     marginTop: -30,
   },
   circleMinusIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
     overflow: "hidden",
   },
   circleMinusIcon1: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
@@ -122,7 +120,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   trucksIcon: {
-    position: "relative",
     flex: 1,
     width: "100%",
     height: 805,

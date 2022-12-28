@@ -104,7 +104,6 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderColor: "#5469b1",
     borderWidth: 1,
-    height: 56,
     flexShrink: 0,
     flexDirection: "row",
     paddingHorizontal: 16,
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     color: "#1A3596",
     fontSize: 14,
     fontWeight: "400",
-    fontFamily: "Roboto",
+    // fontFamily: "Roboto",
   },
 });
 
