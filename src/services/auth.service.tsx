@@ -42,11 +42,12 @@ const resetpassword = (email:string, otp:number, password:string, confirmPasswor
   });;
 };
 
-const login = (email:string, password:string) => {
+const login = (email:string, password:string, type:string) => {
   return axios
     .post(API_URL + "login-user", {
       email,
-      password
+      password,
+      type
     })
     .then(async(response) => {
       console.log("login service res", response.data)

@@ -16,7 +16,8 @@ import * as yup from 'yup'
 import { useDispatch } from "react-redux";
 import { login, register } from '../../slices/auth';
 import { useNavigation, useFocusEffect, useRoute } from '@react-navigation/native';
-import CheckBox from '@react-native-community/checkbox';
+// import CheckBox from '@react-native-community/checkbox';
+import { Checkbox } from 'react-native-paper';
 
 const Signup = () => {
   type Nav = {
@@ -149,10 +150,9 @@ const Signup = () => {
             </View>
           </View>
           <View style={styles.checkbox}>
-            <CheckBox
-              disabled={false}
-              value={values.agree}
-              onValueChange={(newValue) => setFieldValue('agree', newValue)}
+            <Checkbox
+              status={values.agree ? 'checked' : 'unchecked'}
+              onPress={() => setFieldValue('agree', !values.agree)}
             />
             <Text style={[styles.iAgreeWithTermsAndPrivacy, styles.ml6]}>
               <Text style={styles.iAgreeWith}>{`I Agree with `}</Text>

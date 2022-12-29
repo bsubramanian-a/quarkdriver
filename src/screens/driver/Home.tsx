@@ -73,7 +73,7 @@ const Home = () => {
           <CompletedShipment />
         </View>
       </ScrollView>
-      <BottomMenu />
+      {/* <BottomMenu /> */}
     </View>
   );
 };

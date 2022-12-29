@@ -68,9 +68,10 @@ export const resendLoginOtp = createAsyncThunk(
 
 export const login = createAsyncThunk(
   "auth/login",
-  async ({ email, password }:any, thunkAPI) => {
+  async ({ email, password, type }:any, thunkAPI) => {
+    console.log("auth login", type);
     try {
-      const response = await AuthService.login(email, password);
+      const response = await AuthService.login(email, password, type);
       console.log("login res auth", response);
       return response;
     } catch (error:any) {

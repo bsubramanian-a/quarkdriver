@@ -1,19 +1,31 @@
 import * as React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View, Pressable } from "react-native";
 
-const BottomMenu = () => {
+const BottomMenu = ({ state, descriptors, navigation }:any) => {
+  console.log("navigation", navigation);
+
+  const navigateToPage = (page:string) => {
+    console.log("navigate");
+    navigation.navigate(page);
+  }
+
   return (
     <View style={styles.frameView}>
-      <Image
-        style={styles.settingIcon}
-        resizeMode="cover"
-        source={require("../../../assets/setting.png")}
-      />
-      <Image
-        style={styles.homeIcon}
-        resizeMode="cover"
-        source={require("../../../assets/home.png")}
-      />
+      <Pressable onPress={() =>  navigateToPage('Home')}>
+        <Image
+          style={styles.settingIcon}
+          resizeMode="cover"
+          source={require("../../../assets/setting.png")}
+        />
+      </Pressable>
+      
+      <Pressable onPress={() =>  navigateToPage('Home')}>
+        <Image
+          style={styles.homeIcon}
+          resizeMode="cover"
+          source={require("../../../assets/home.png")}
+        />
+      </Pressable>
       <Image
         style={styles.profileIcon}
         resizeMode="cover"
@@ -81,6 +93,7 @@ const styles = StyleSheet.create({
     boxSizing: "border-box",
     alignItems: "center",
     justifyContent: "space-between",
+    zIndex: 10000
   },
 });
 

@@ -20,7 +20,7 @@ import NoNotification from '../screens/general/NoNotification';
 import Notification from '../screens/general/Notification';
 
 // create a component
-const Supplier = (Stack:any) => {
+const Supplier = (Stack:any, Tab:any) => {
     return (
         <Stack.Navigator screenOptions={{
             headerShown: false

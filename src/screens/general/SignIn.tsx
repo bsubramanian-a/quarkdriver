@@ -35,6 +35,7 @@ const SignIn = () => {
     React.useCallback(() => {
       if (route?.params) {
         setUtype(route?.params.user_type);
+        console.log("user type", route?.params.user_type);
       }
     }, [route?.params])
   );
@@ -55,7 +56,7 @@ const SignIn = () => {
     setErrorMessage("");
     setIsLoading(true);
 
-    dispatch(login({ email: values.email, password: values.password }))
+    dispatch(login({ email: values.email, password: values.password, type: uType }))
       .unwrap()
       .then((res: any) => {
         console.log("res", res);

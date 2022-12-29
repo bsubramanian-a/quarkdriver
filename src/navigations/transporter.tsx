@@ -12,7 +12,7 @@ import DepartureInfoIcon from '../screens/transporter/DepartureInfoIcon';
 import CargoInfoIcon from '../screens/transporter/CargoInfoIcon';
 
 // create a component
-const Transporter = (Stack:any) => {
+const Transporter = (Stack:any, Tab:any) => {
     return (
         <Stack.Navigator screenOptions={{
             headerShown: false

@@ -4,9 +4,10 @@ import LoginLogo from "../driver/components/LoginLogo";
 import CheckboxLabel from "../driver/components/CheckboxLabel";
 import MainButton from "../general/components/MainButton";
 // import CheckBox from "../driver/components/CheckboxCustom";
-import CheckBox from '@react-native-community/checkbox';
+// import CheckBox from '@react-native-community/checkbox';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { Checkbox } from 'react-native-paper';
 
 const LoginAs = () => {
   type Nav = {
@@ -25,6 +26,7 @@ const LoginAs = () => {
   const [uType, setUtype] = useState('');
 
   const changeUserType = (value: boolean, type: string) => {
+    console.log("changeUserType", value, type);
     setUtype(type);
     if (type == 'driver') {
       setUserType({ ...userType, driver: value, buyer: false, receiver: false, company: false })
@@ -62,37 +64,33 @@ const LoginAs = () => {
           <CheckboxLabel driver="Transportation company" /> */}
 
           <View style={styles.checkbox}>
-            <CheckBox
-              disabled={false}
-              value={userType.driver}
-              onValueChange={(newValue) => changeUserType(newValue, 'driver')}
+            <Checkbox
+              status={userType.driver ? 'checked' : 'unchecked'}
+              onPress={() => changeUserType(!userType.driver, 'driver')}
             />
             <Text style={styles.typeName}>Driver</Text>
           </View>
 
           <View style={styles.checkbox}>
-            <CheckBox
-              disabled={false}
-              value={userType.buyer}
-              onValueChange={(newValue) => changeUserType(newValue, 'supplier')}
+            <Checkbox
+              status={userType.buyer ? 'checked' : 'unchecked'}
+              onPress={() => changeUserType(!userType.buyer, 'supplier')}
             />
             <Text style={styles.typeName}>Supplier</Text>
           </View>
 
           <View style={styles.checkbox}>
-            <CheckBox
-              disabled={false}
-              value={userType.receiver}
-              onValueChange={(newValue) => changeUserType(newValue, 'receiver')}
+            <Checkbox
+              status={userType.receiver ? 'checked' : 'unchecked'}
+              onPress={() => changeUserType(!userType.receiver, 'receiver')}
             />
             <Text style={styles.typeName}>Receiver</Text>
           </View>
 
           <View style={styles.checkbox}>
-            <CheckBox
-              disabled={false}
-              value={userType.company}
-              onValueChange={(newValue) => changeUserType(newValue, 'transporter')}
+            <Checkbox
+              status={userType.company ? 'checked' : 'unchecked'}
+              onPress={() => changeUserType(!userType.company, 'transporter')}
             />
             <Text style={styles.typeName}>Transportation company</Text>
           </View>
@@ -124,6 +122,7 @@ const styles = StyleSheet.create({
   },
   typeName: {
     marginStart: 15,
+    color: '#000'
   },
   cBox: {
     width: 24,

@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   textInputStyle: {
     alignSelf: "stretch",
     position: "relative",
-    height: 36,
+    // height: 36,
     flexShrink: 0,
     fontFamily: "Roboto"
   },
