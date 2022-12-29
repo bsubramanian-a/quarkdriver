@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   lineView: {
-    position: "relative",
     borderStyle: "solid",
     borderColor: "#1a3596",
     borderTopWidth: 1,
@@ -80,13 +79,11 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   companyImgIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
   },
   sansoTransportionCompany: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -95,13 +92,11 @@ const styles = StyleSheet.create({
     width: 193,
   },
   tRPO123: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "center",
-    width: 74,
   },
   frameView: {
     flexDirection: "column",
@@ -109,15 +104,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   companyDetails: {
-    width: 293,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
   },
   commodityName: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 12,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -125,9 +116,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   causticSoda: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -135,14 +123,9 @@ const styles = StyleSheet.create({
   },
   commodity: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   packing: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 12,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -150,9 +133,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   bag25Kg: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -160,14 +140,9 @@ const styles = StyleSheet.create({
   },
   pack: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   hSCode: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -175,9 +150,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -185,21 +157,15 @@ const styles = StyleSheet.create({
   },
   code: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   frameView1: {
-    width: 99,
     flexShrink: 0,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   netWeight: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -207,9 +173,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   istanbulTurkey: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -217,14 +180,9 @@ const styles = StyleSheet.create({
   },
   net: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   grossWeight: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -232,9 +190,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   warshoPoland: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -242,14 +197,9 @@ const styles = StyleSheet.create({
   },
   gross: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   loadingTime: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -257,9 +207,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mrSamoelLeit: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -267,12 +214,9 @@ const styles = StyleSheet.create({
   },
   time: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   frameView2: {
-    width: 99,
     flexShrink: 0,
     flexDirection: "column",
     alignItems: "flex-start",
@@ -286,6 +230,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   details1: {
+    width: "100%",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",

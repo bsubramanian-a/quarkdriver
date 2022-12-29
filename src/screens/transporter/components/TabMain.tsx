@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useMemo } from "react";
 import { Text, StyleSheet, View } from "react-native";
+import { red100 } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 type TabMainType = {
   /** Style props */
@@ -64,7 +65,6 @@ const TabMain = ({
 const styles = StyleSheet.create({
   inProgressBooking: {
     flex: 1,
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
     borderBottomWidth: 2,
     borderLeftWidth: 0,
-    width: 159,
+    width: "48%",
     flexShrink: 0,
     flexDirection: "row",
     paddingHorizontal: 13,
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
   },
   completedBooking: {
     flex: 1,
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#8493c7",
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
     borderBottomWidth: 2,
     borderLeftWidth: 0,
-    width: 159,
+    width: "48%",
     flexShrink: 0,
     flexDirection: "row",
     paddingHorizontal: 13,

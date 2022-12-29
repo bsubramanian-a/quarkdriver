@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   departureInfo: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

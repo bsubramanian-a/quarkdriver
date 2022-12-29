@@ -48,9 +48,7 @@ const LoadingTab = () => {
             <View style={[styles.address1, styles.mt13]}>
               <Text style={styles.address}>Address</Text>
               <Text style={[styles.turkishMarcoCompanyIstanb, styles.mt4]}>
-                <Text style={styles.turkishMarco}>{`Turkish Marco `}</Text>
-                <Text style={styles.companyIstanbul}>company, Istanbul,</Text>
-                <Text style={styles.turkey}>343,Turkey</Text>
+                <Text>Turkish Marco company, Istanbul, 343, Turkey</Text>
               </Text>
             </View>
           </View>
@@ -83,7 +81,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   lineView: {
-    position: "relative",
     borderStyle: "solid",
     borderColor: "#1a3596",
     borderTopWidth: 1,
@@ -92,28 +89,23 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   companyImgIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
   },
   sansoTransportionCompany: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "left",
-    width: 193,
   },
   tRPO123: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "center",
-    width: 74,
   },
   frameView: {
     flexDirection: "column",
@@ -121,13 +113,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   companyDetails: {
-    width: 293,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
   },
   companyName: {
-    position: "relative",
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -135,7 +125,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   marcoCompany: {
-    position: "relative",
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -148,9 +137,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   cost: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -158,9 +144,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -168,12 +151,9 @@ const styles = StyleSheet.create({
   },
   price: {
     alignSelf: "stretch",
-    position: "relative",
-    height: 31,
     flexShrink: 0,
   },
   clearanceAgentName: {
-    position: "relative",
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -181,7 +161,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mischailJeyson: {
-    position: "relative",
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
@@ -199,7 +178,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   phoneNumber: {
-    position: "relative",
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -207,7 +185,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text1: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#000",
@@ -220,48 +197,34 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   address: {
-    position: "relative",
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
     color: "#8493c7",
     textAlign: "left",
   },
-  turkishMarco: {
-    marginStart: 0,
-    marginEnd: 0,
-  },
-  companyIstanbul: {
-    marginStart: 0,
-    marginEnd: 0,
-  },
-  turkey: {
-    margin: 0,
-  },
   turkishMarcoCompanyIstanb: {
-    flex: 1,
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
-    width: 91,
   },
   address1: {
     alignSelf: "stretch",
-    height: 56,
     flexShrink: 0,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   frameView2: {
+    width: "43%",
     alignSelf: "stretch",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   frameView3: {
+    width: "100%",
     alignSelf: "stretch",
     flexDirection: "row",
     paddingRight: 20,
@@ -269,6 +232,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   details: {
+    width: "100%",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",

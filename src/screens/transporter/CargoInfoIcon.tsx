@@ -70,14 +70,12 @@ const styles = StyleSheet.create({
     marginTop: -30,
   },
   circleMinusIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
     overflow: "hidden",
   },
   circleMinusIcon1: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
@@ -108,6 +106,7 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "flex-start",
+    marginBottom: 90,
     justifyContent: "flex-end",
   },
   frame: {

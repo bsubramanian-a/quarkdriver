@@ -10,6 +10,7 @@ import {
 import Menu from "./components/Menu";
 import DriverInfo from "./components/DriverInfo";
 import BottomMenu from "../general/components/BottomMenu";
+import HeaderInside from "../general/components/HeaderInside";
 
 const DriverInfoIcon = () => {
   return (
@@ -18,28 +19,7 @@ const DriverInfoIcon = () => {
       resizeMode="stretch"
       source={require("../../assets/frame4811.png")}
     >
-      <View style={styles.headerTransporter}>
-        <View style={styles.frameView1}>
-          <Image
-            style={styles.combinedShapeIcon}
-            resizeMode="cover"
-            source={require("../../assets/combinedshape.png")}
-          />
-          <View style={styles.frameView}>
-            <Image
-              style={styles.lOGO13}
-              resizeMode="cover"
-              source={require("../../assets/logo-1-3.png")}
-            />
-            <Text style={[styles.qUARK, styles.mt_7]}>QUARK</Text>
-          </View>
-          <Image
-            style={styles.ellipseIcon}
-            resizeMode="cover"
-            source={require("../../assets/ellipse-76.png")}
-          />
-        </View>
-      </View>
+      <HeaderInside />
       <ScrollView
         style={styles.frame}
         showsHorizontalScrollIndicator={false}
@@ -89,26 +69,9 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
   combinedShapeIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
-  },
-  lOGO13: {
-    position: "relative",
-    width: 55,
-    height: 55,
-    flexShrink: 0,
-    overflow: "hidden",
-  },
-  qUARK: {
-    alignSelf: "stretch",
-    position: "relative",
-    fontSize: 14,
-    fontWeight: "500",
-    fontFamily: "Roboto",
-    color: "#fff",
-    textAlign: "center",
   },
   frameView: {
     flexDirection: "column",
@@ -116,7 +79,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   ellipseIcon: {
-    position: "relative",
     width: 40,
     height: 40,
     flexShrink: 0,
@@ -127,29 +89,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  headerTransporter: {
-    alignSelf: "stretch",
-    borderBottomRightRadius: 40,
-    borderBottomLeftRadius: 40,
-    backgroundColor: "#5469b1",
-    height: 148,
-    flexShrink: 0,
-    flexDirection: "column",
-    paddingHorizontal: 16,
-    paddingTop: 55,
-    paddingBottom: 24,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   circleMinusIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
     overflow: "hidden",
   },
   circleMinusIcon1: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
@@ -180,6 +126,7 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "flex-start",
+    marginBottom: 90,
     justifyContent: "flex-end",
   },
   frame: {
@@ -187,7 +134,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   driverInfoIcon: {
-    position: "relative",
     flex: 1,
     width: "100%",
     height: 815,

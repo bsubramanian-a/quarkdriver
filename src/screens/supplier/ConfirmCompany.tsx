@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   confirmCompany: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

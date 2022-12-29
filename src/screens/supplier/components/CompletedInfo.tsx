@@ -89,14 +89,12 @@ const styles = StyleSheet.create({
     marginTop: 11,
   },
   packageIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
   },
   sansoTransportionCompany: {
-    alignSelf: "stretch",
-    position: "relative",
+    alignSelf: "stretch",  
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -105,7 +103,6 @@ const styles = StyleSheet.create({
   },
   tRPO123: {
     alignSelf: "stretch",
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -124,8 +121,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "center",
   },
-  frameView: {
-    position: "relative",
+  frameView: {   
     borderRadius: 10,
     backgroundColor: "#1a3596",
     borderStyle: "solid",
@@ -135,14 +131,12 @@ const styles = StyleSheet.create({
     height: 10,
     flexShrink: 0,
   },
-  frameIcon: {
-    position: "relative",
+  frameIcon: { 
     width: 2,
     height: 57,
     flexShrink: 0,
   },
   frameView1: {
-    position: "relative",
     borderRadius: 10,
     backgroundColor: "#fff",
     borderStyle: "solid",
@@ -158,14 +152,12 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   from: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "center",
   },
   istanbulTurky: {
-    position: "relative",
     fontSize: 11,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -178,14 +170,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   to: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "center",
   },
   warshoPoland: {
-    position: "relative",
     fontSize: 11,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -209,14 +199,12 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   cargo: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "center",
   },
   casticSoda: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -229,14 +217,12 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   cost: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#fff",
     textAlign: "center",
   },
   text: {
-    position: "relative",
     fontSize: 12,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -262,6 +248,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   frameView9: {
+    marginBottom: 16,
     borderRadius: 15,
     backgroundColor: "#8493c7",
     width: "88%",

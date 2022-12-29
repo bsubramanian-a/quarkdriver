@@ -106,17 +106,13 @@ const styles = StyleSheet.create({
     marginEnd: 0,
   },
   youWillRecieveAnOTPCodeF: {
-    position: "relative",
     fontSize: 13,
     fontWeight: "500",
     fontFamily: "Roboto",
     color: "#0a288f",
     textAlign: "center",
-    width: 305,
-    height: 34,
   },
   pleaseTypeAndSubmit: {
-    position: "relative",
     fontSize: 11,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -153,7 +149,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   oTP: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

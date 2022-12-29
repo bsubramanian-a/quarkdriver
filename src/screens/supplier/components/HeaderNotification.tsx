@@ -72,16 +72,14 @@ const styles = StyleSheet.create({
     marginTop: -7,
   },
   mt47: {
-    marginTop: 47,
+    marginTop: 30,
   },
   combinedShapeIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
   },
   lOGO13: {
-    position: "relative",
     width: 55,
     height: 55,
     flexShrink: 0,
@@ -89,7 +87,6 @@ const styles = StyleSheet.create({
   },
   qUARK: {
     alignSelf: "stretch",
-    position: "relative",
     fontSize: 14,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -102,7 +99,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   ellipseIcon: {
-    position: "relative",
     width: 40,
     height: 40,
     flexShrink: 0,
@@ -114,9 +110,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   createNewBooking: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 18,
     fontWeight: "700",
     fontFamily: "Roboto",
@@ -124,16 +117,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   groupView: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: 165,
-    height: 21,
+    flexShrink: 0,
   },
   groupView1: {
-    position: "relative",
-    width: 165,
-    height: 21,
     flexShrink: 0,
   },
   headerTransporter: {
@@ -145,8 +131,8 @@ const styles = StyleSheet.create({
     flexShrink: 0,
     flexDirection: "column",
     paddingHorizontal: 16,
-    paddingTop: 23,
-    paddingBottom: 11,
+    paddingTop: 36,
+    paddingBottom: 12,
     alignItems: "center",
     justifyContent: "flex-start",
   },

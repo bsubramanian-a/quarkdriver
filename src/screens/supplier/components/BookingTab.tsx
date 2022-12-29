@@ -46,7 +46,7 @@ const BookingTab = () => {
             <View style={[styles.dAgent, styles.mt12]}>
               <Text
                 style={styles.agentCompanyAtDestination}
-              >{`Agent Company at Destination `}</Text>
+              >{`Agent Company \n at Destination `}</Text>
               <Text style={styles.mrSamoelLeit}>Mr. Samoel Leit</Text>
             </View>
           </View>
@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   lineView: {
-    position: "relative",
     borderStyle: "solid",
     borderColor: "#1a3596",
     borderTopWidth: 1,
@@ -82,28 +81,23 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   companyImgIcon: {
-    position: "relative",
     width: 48,
     height: 48,
     flexShrink: 0,
   },
   sansoTransportionCompany: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "left",
-    width: 193,
   },
   tRPO123: {
-    position: "relative",
     fontSize: 14,
     fontWeight: "700",
     fontFamily: "Roboto",
     color: "#08288d",
     textAlign: "center",
-    width: 74,
   },
   frameView: {
     flexDirection: "column",
@@ -111,15 +105,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   companyDetails: {
-    width: 293,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
   },
   cargo: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -127,24 +117,15 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   causticSoda: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
   },
   dCargo: {
-    position: "relative",
-    width: 70,
-    height: 31,
     flexShrink: 0,
   },
   cost: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -152,24 +133,15 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   text: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
   },
   dCost: {
-    position: "relative",
-    width: 40,
-    height: 31,
     flexShrink: 0,
   },
   paymentTerms: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -177,18 +149,12 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   cash: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
   },
   dPayment: {
-    position: "relative",
-    width: 78,
-    height: 31,
     flexShrink: 0,
   },
   frameView1: {
@@ -197,9 +163,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   from: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -207,24 +170,15 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   istanbulTurkey: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
   },
   dFrom: {
-    position: "relative",
-    width: 84,
-    height: 31,
     flexShrink: 0,
   },
   to: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -232,24 +186,15 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   warshoPoland: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
   },
   dTo: {
-    position: "relative",
-    width: 83,
-    height: 31,
     flexShrink: 0,
   },
   agentCompanyAtDestination: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     fontSize: 11,
     fontWeight: "600",
     fontFamily: "Roboto",
@@ -257,32 +202,28 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   mrSamoelLeit: {
-    position: "absolute",
-    top: 17,
-    left: 0,
     fontSize: 12,
     fontFamily: "Roboto",
     color: "#000",
     textAlign: "left",
   },
   dAgent: {
-    position: "relative",
-    width: 151,
-    height: 31,
     flexShrink: 0,
   },
   frameView2: {
+    width: "45%",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   frameView3: {
-    width: 293,
+    width: "100%",
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-between",
   },
   details: {
+    width: "100%",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",

@@ -56,25 +56,21 @@ const BottomMenu = ({
 
 const styles = StyleSheet.create({
   vectorIcon: {
-    position: "relative",
     width: 25,
     height: 27,
     flexShrink: 0,
   },
   vectorIcon1: {
-    position: "relative",
     width: 25,
     height: 27,
     flexShrink: 0,
   },
   vectorIcon2: {
-    position: "relative",
     width: 21,
     height: 27,
     flexShrink: 0,
   },
   vectorIcon3: {
-    position: "relative",
     width: 23,
     height: 27,
     flexShrink: 0,

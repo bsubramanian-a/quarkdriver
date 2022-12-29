@@ -102,7 +102,6 @@ const styles = StyleSheet.create({
     paddingTop: 24,
   },
   fill4Icon: {
-    position: "relative",
     width: 8,
     height: 5,
     flexShrink: 0,
@@ -120,7 +119,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   loadingInformation: {
-    position: "relative",
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Roboto",
@@ -133,7 +131,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   companyName: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -146,7 +143,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   companyRepresentative: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -159,7 +155,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   companyClearanceAgent: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -172,7 +167,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   hSCode: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -185,7 +179,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   adresss: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -198,7 +191,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   zipCode: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -211,7 +203,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   phoneNumber: {
-    position: "relative",
     fontSize: 14,
     fontFamily: "Roboto",
     color: "#0a288f",
@@ -251,7 +242,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   addLoading: {
-    position: "relative",
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",

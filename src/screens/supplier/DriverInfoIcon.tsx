@@ -65,14 +65,12 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
   circleMinusIcon: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
     overflow: "hidden",
   },
   circleMinusIcon1: {
-    position: "relative",
     width: 24,
     height: 24,
     flexShrink: 0,
@@ -100,6 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   frameView: {
+    marginBottom: 90,
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "flex-start",
@@ -110,7 +109,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   driverInfoIcon: {
-    position: "relative",
     flex: 1,
     width: "100%",
     height: 815,
